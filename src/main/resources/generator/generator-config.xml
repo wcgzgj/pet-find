@@ -40,8 +40,8 @@
                              targetPackage="petfind.mapper"
                              type="XMLMAPPER"/>
 
-        <table tableName="demo" domainObjectName="Demo"/>
-        <!--<table tableName=""/>-->
+        <!--<table tableName="demo" domainObjectName="Demo"/>-->
+        <table tableName="pic"/>
         <!--<table tableName="category"/>-->
         <!--<table tableName="doc"/>-->
         <!--<table tableName="content"/>-->

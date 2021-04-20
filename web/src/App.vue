@@ -27,7 +27,7 @@
 
 <style lang="scss">
   .the-header, .the-footer {
-    background-color: #B3C0D1;
+    background-color: #87cefa;
     color: #333;
     text-align: center;
     line-height: 60px;

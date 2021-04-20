@@ -1,5 +1,5 @@
 <template>
-    <el-footer style="background-color: #545c64" class="the-footer" >
+    <el-footer style="background-color: #87cefa" class="the-footer" >
         <div style="text-decoration-color: #E9EEF3">
             <span>溯宠</span>
             <el-divider direction="vertical"></el-divider>

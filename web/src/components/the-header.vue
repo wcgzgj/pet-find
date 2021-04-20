@@ -3,10 +3,10 @@
             class="the-header"
             mode="horizontal"
             @select="handleSelect"
-            background-color="#545c64"
+            background-color="#87cefa"
             text-color="#fff"
             router
-            active-text-color="#ffd04b">
+            active-text-color="#1e90ff">
         <el-menu-item index="/" text-color="#303133">
             <el-link :underline="false" >
                 溯宠

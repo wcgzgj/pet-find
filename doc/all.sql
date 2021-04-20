@@ -20,3 +20,14 @@ create table `demo` (
 ) engine=innodb default charset =utf8mb4 comment '测试';
 
 insert into `demo` (id,name) values(2,'测试2');
+
+
+# pic列表
+drop table if exists `pic`;
+create table `pic` (
+                        `id` bigint not null comment 'id',
+                        `path` varchar(255) comment '图片路径',
+                        primary key (`id`)
+) engine=innodb default charset =utf8mb4 comment '测试';
+
+insert into `demo` (id,name) values(1,'路径 1');
