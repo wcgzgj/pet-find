@@ -8,4 +8,7 @@ package petfind.pojo;
  * @Version 1.0
  **/
 public class Test {
+    public void list(){
+
+    }
 }
