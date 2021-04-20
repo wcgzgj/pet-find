@@ -1,0 +1,4 @@
+GET http://localhost:9000/test/list
+Accept: application/json
+
+###

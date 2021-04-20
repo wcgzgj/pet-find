@@ -1,6 +1,9 @@
+server:
+  port: 9000
+
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/pet-find?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://rm-uf6914e21vv948nikyo.mysql.rds.aliyuncs.com/pet-find?useUnicode=true&characterEncoding=utf-8
     username: pet_find_admin
     password: 19180319zZJ
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -10,7 +13,7 @@ spring:
 mybatis:
   # ** 表示在mapper下不管有多少文件夹，都可以全部识别
   mapper-locations: classpath:/mapper/**/*.xml
-  type-aliases-package: weixindemo.pojo
+  type-aliases-package: petfind.pojo
   #  打印sql相关的日志信息
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
