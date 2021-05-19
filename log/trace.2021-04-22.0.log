@@ -1,3 +1,63 @@
+2021-04-22 08:33:29.712 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.1.7.Final
+2021-04-22 08:33:29.718 INFO  petfind.config.PetFindApplication                 :55   [32m                  [0;39m Starting PetFindApplication using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 77752 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别)
+2021-04-22 08:33:29.720 INFO  petfind.config.PetFindApplication                 :675  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-04-22 08:33:29.812 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-22 08:33:29.813 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-22 08:33:31.215 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-04-22 08:33:31.224 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-04-22 08:33:31.225 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-04-22 08:33:31.225 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-22 08:33:31.282 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-04-22 08:33:31.282 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1468 ms
+2021-04-22 08:33:31.875 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-22 08:33:32.175 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-04-22 08:33:32.195 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-04-22 08:33:32.221 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-04-22 08:33:32.231 INFO  petfind.config.PetFindApplication                 :61   [32m                  [0;39m Started PetFindApplication in 2.994 seconds (JVM running for 3.556)
+2021-04-22 08:50:22.286 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-22 08:50:22.290 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-04-22 08:50:22.302 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 12 ms
+2021-04-22 08:50:22.387 INFO  petfind.aspect.LogAspect                          :62   [32m40237729874841600 [0;39m ------------- 开始 -------------
+2021-04-22 08:50:22.388 INFO  petfind.aspect.LogAspect                          :63   [32m40237729874841600 [0;39m 请求地址: http://127.0.0.1:9000/pic/save POST
+2021-04-22 08:50:22.389 INFO  petfind.aspect.LogAspect                          :64   [32m40237729874841600 [0;39m 类名方法: petfind.controller.PicController.save
+2021-04-22 08:50:22.389 INFO  petfind.aspect.LogAspect                          :65   [32m40237729874841600 [0;39m 远程地址: 127.0.0.1
+2021-04-22 08:50:22.454 INFO  petfind.aspect.LogAspect                          :87   [32m40237729874841600 [0;39m 请求参数: []
+2021-04-22 08:50:22.464 INFO  petfind.controller.PicController                  :40   [32m40237729874841600 [0;39m 触发上传接口
+2021-04-22 08:50:22.491 INFO  petfind.aspect.LogAspect                          :99   [32m40237729874841600 [0;39m 返回结果: {"success":true}
+2021-04-22 08:50:22.492 INFO  petfind.aspect.LogAspect                          :100  [32m40237729874841600 [0;39m ------------- 结束 耗时：109 ms -------------
+2021-04-22 08:50:33.216 INFO  petfind.aspect.LogAspect                          :62   [32m40237775311736832 [0;39m ------------- 开始 -------------
+2021-04-22 08:50:33.217 INFO  petfind.aspect.LogAspect                          :63   [32m40237775311736832 [0;39m 请求地址: http://127.0.0.1:9000/pic/save POST
+2021-04-22 08:50:33.217 INFO  petfind.aspect.LogAspect                          :64   [32m40237775311736832 [0;39m 类名方法: petfind.controller.PicController.save
+2021-04-22 08:50:33.218 INFO  petfind.aspect.LogAspect                          :65   [32m40237775311736832 [0;39m 远程地址: 127.0.0.1
+2021-04-22 08:50:33.218 INFO  petfind.aspect.LogAspect                          :87   [32m40237775311736832 [0;39m 请求参数: []
+2021-04-22 08:50:33.219 INFO  petfind.controller.PicController                  :40   [32m40237775311736832 [0;39m 触发上传接口
+2021-04-22 08:50:33.219 INFO  petfind.aspect.LogAspect                          :99   [32m40237775311736832 [0;39m 返回结果: {"success":true}
+2021-04-22 08:50:33.220 INFO  petfind.aspect.LogAspect                          :100  [32m40237775311736832 [0;39m ------------- 结束 耗时：4 ms -------------
+2021-04-22 09:10:09.400 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-22 09:10:15.323 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.1.7.Final
+2021-04-22 09:10:15.329 INFO  petfind.config.PetFindApplication                 :55   [32m                  [0;39m Starting PetFindApplication using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 78593 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别)
+2021-04-22 09:10:15.329 INFO  petfind.config.PetFindApplication                 :675  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-04-22 09:10:15.378 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-22 09:10:15.378 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-22 09:10:16.703 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-04-22 09:10:16.711 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-04-22 09:10:16.712 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-04-22 09:10:16.712 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-22 09:10:16.769 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-04-22 09:10:16.769 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1390 ms
+2021-04-22 09:10:17.334 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-22 09:10:17.621 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-04-22 09:10:17.640 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-04-22 09:10:17.666 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-04-22 09:10:17.676 INFO  petfind.config.PetFindApplication                 :61   [32m                  [0;39m Started PetFindApplication in 2.761 seconds (JVM running for 3.335)
+2021-04-22 09:10:29.854 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-22 09:10:29.855 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-04-22 09:10:29.856 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-04-22 09:10:29.917 INFO  petfind.aspect.LogAspect                          :62   [32m40242794631139328 [0;39m ------------- 开始 -------------
+2021-04-22 09:10:29.917 INFO  petfind.aspect.LogAspect                          :63   [32m40242794631139328 [0;39m 请求地址: http://127.0.0.1:9000/pic/save POST
+2021-04-22 09:10:29.918 INFO  petfind.aspect.LogAspect                          :64   [32m40242794631139328 [0;39m 类名方法: petfind.controller.PicController.save
+2021-04-22 09:10:29.918 INFO  petfind.aspect.LogAspect                          :65   [32m40242794631139328 [0;39m 远程地址: 127.0.0.1
+2021-04-22 09:10:29.954 INFO  petfind.aspect.LogAspect                          :87   [32m40242794631139328 [0;39m 请求参数: [null]
 2021-04-22 09:10:29.963 ERROR petfind.controller.ControllerExceptionHandler     :69   [32m40242794631139328 [0;39m 系统异常：
 java.lang.NullPointerException: null
 	at petfind.controller.PicController.save(PicController.java:44)
@@ -75,6 +135,32 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+2021-04-22 09:10:30.027 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m40242794631139328 [0;39m Resolved [java.lang.NullPointerException]
+2021-04-22 09:11:01.529 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-22 09:11:05.153 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.1.7.Final
+2021-04-22 09:11:05.162 INFO  petfind.config.PetFindApplication                 :55   [32m                  [0;39m Starting PetFindApplication using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 78620 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别)
+2021-04-22 09:11:05.163 INFO  petfind.config.PetFindApplication                 :675  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-04-22 09:11:05.213 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-22 09:11:05.213 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-22 09:11:06.232 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-04-22 09:11:06.238 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-04-22 09:11:06.239 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-04-22 09:11:06.239 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-22 09:11:06.283 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-04-22 09:11:06.284 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1070 ms
+2021-04-22 09:11:06.791 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-22 09:11:07.022 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-04-22 09:11:07.039 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-04-22 09:11:07.063 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-04-22 09:11:07.072 INFO  petfind.config.PetFindApplication                 :61   [32m                  [0;39m Started PetFindApplication in 2.249 seconds (JVM running for 2.761)
+2021-04-22 09:11:25.526 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-22 09:11:25.528 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-04-22 09:11:25.532 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 4 ms
+2021-04-22 09:11:25.595 INFO  petfind.aspect.LogAspect                          :62   [32m40243028165791744 [0;39m ------------- 开始 -------------
+2021-04-22 09:11:25.596 INFO  petfind.aspect.LogAspect                          :63   [32m40243028165791744 [0;39m 请求地址: http://127.0.0.1:9000/pic/save POST
+2021-04-22 09:11:25.597 INFO  petfind.aspect.LogAspect                          :64   [32m40243028165791744 [0;39m 类名方法: petfind.controller.PicController.save
+2021-04-22 09:11:25.597 INFO  petfind.aspect.LogAspect                          :65   [32m40243028165791744 [0;39m 远程地址: 127.0.0.1
+2021-04-22 09:11:25.640 INFO  petfind.aspect.LogAspect                          :87   [32m40243028165791744 [0;39m 请求参数: [null]
 2021-04-22 09:11:25.650 ERROR petfind.controller.ControllerExceptionHandler     :69   [32m40243028165791744 [0;39m 系统异常：
 java.lang.NullPointerException: null
 	at petfind.controller.PicController.save(PicController.java:45)
@@ -152,6 +238,12 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+2021-04-22 09:11:25.692 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m40243028165791744 [0;39m Resolved [java.lang.NullPointerException]
+2021-04-22 09:20:03.000 INFO  petfind.aspect.LogAspect                          :62   [32m40245198319652864 [0;39m ------------- 开始 -------------
+2021-04-22 09:20:03.004 INFO  petfind.aspect.LogAspect                          :63   [32m40245198319652864 [0;39m 请求地址: http://127.0.0.1:9000/pic/save POST
+2021-04-22 09:20:03.005 INFO  petfind.aspect.LogAspect                          :64   [32m40245198319652864 [0;39m 类名方法: petfind.controller.PicController.save
+2021-04-22 09:20:03.005 INFO  petfind.aspect.LogAspect                          :65   [32m40245198319652864 [0;39m 远程地址: 127.0.0.1
+2021-04-22 09:20:03.006 INFO  petfind.aspect.LogAspect                          :87   [32m40245198319652864 [0;39m 请求参数: [null]
 2021-04-22 09:20:03.008 ERROR petfind.controller.ControllerExceptionHandler     :69   [32m40245198319652864 [0;39m 系统异常：
 java.lang.NullPointerException: null
 	at petfind.controller.PicController.save(PicController.java:45)
@@ -229,6 +321,12 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+2021-04-22 09:20:03.016 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m40245198319652864 [0;39m Resolved [java.lang.NullPointerException]
+2021-04-22 09:20:47.489 INFO  petfind.aspect.LogAspect                          :62   [32m40245384924237824 [0;39m ------------- 开始 -------------
+2021-04-22 09:20:47.491 INFO  petfind.aspect.LogAspect                          :63   [32m40245384924237824 [0;39m 请求地址: http://127.0.0.1:9000/pic/save POST
+2021-04-22 09:20:47.491 INFO  petfind.aspect.LogAspect                          :64   [32m40245384924237824 [0;39m 类名方法: petfind.controller.PicController.save
+2021-04-22 09:20:47.492 INFO  petfind.aspect.LogAspect                          :65   [32m40245384924237824 [0;39m 远程地址: 127.0.0.1
+2021-04-22 09:20:47.492 INFO  petfind.aspect.LogAspect                          :87   [32m40245384924237824 [0;39m 请求参数: [null]
 2021-04-22 09:20:47.493 ERROR petfind.controller.ControllerExceptionHandler     :69   [32m40245384924237824 [0;39m 系统异常：
 java.lang.NullPointerException: null
 	at petfind.controller.PicController.save(PicController.java:45)
@@ -306,3 +404,5 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+2021-04-22 09:20:47.497 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m40245384924237824 [0;39m Resolved [java.lang.NullPointerException]
+2021-04-22 09:46:38.870 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'

@@ -10,9 +10,11 @@
       <el-upload
               class="upload-demo"
               drag
-              action="/pic/save"
+              action="#"
               :before-upload="beforeupload"
-              limit="3"
+              :http-request="uploadHttpRequest"
+              limit="1"
+              :file-list="fileList"
               multiple>
         <i class="el-icon-upload"></i>
         <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
@@ -29,6 +31,7 @@
         <i class="el-icon-bottom"></i>
       </div>
 
+
       <el-carousel :interval="2000" type="card" height="200px">
         <el-carousel-item v-for="item in 6" :key="item" >
           <h3 class="medium">{{ item }}</h3>
@@ -39,13 +42,43 @@
   </el-container>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script>
+
+import { defineComponent,onMounted,ref } from 'vue';
+import axios from 'axios'
 
 export default defineComponent({
   name: 'Home',
-  components: {
-  },
+  components: {},
+
+    setup() {
+
+      const fileList=[];
+
+      const uploadHttpRequest = (req) => {
+        let formData = new FormData();
+        formData.append("pic",req.file)
+        axios.post("/pic/save",formData).then((resp)=> {
+          const data = resp.data
+          if (data.success) {
+            console.log("图片上传成功！")
+          } else {
+            console.log("图片上传失败！")
+          }
+        })
+      }
+
+
+      onMounted(()=>{
+      })
+
+      return {
+        uploadHttpRequest,
+        fileList
+      }
+    }
+
+
 });
 </script>
 
