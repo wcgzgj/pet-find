@@ -18,7 +18,7 @@ import java.util.List;
  * @Version 1.0
  **/
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/tqest")
 public class TestController {
 
     private static final Logger LOG= LoggerFactory.getLogger(TestController.class);
