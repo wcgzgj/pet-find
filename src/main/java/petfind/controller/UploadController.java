@@ -3,11 +3,21 @@ package petfind.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import petfind.resp.CommonResp;
+import petfind.service.FileService;
+import petfind.service.PicService;
+import petfind.util.SnowFlake;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @ClassName UploadController
@@ -17,20 +27,30 @@ import javax.servlet.http.HttpServletRequest;
  * @Version 1.0
  **/
 @RestController
+@RequestMapping("/file")
 public class UploadController {
 
     private static final Logger LOG= LoggerFactory.getLogger(UploadController.class);
 
+    @Resource
+    private SnowFlake snowFlake;
+
+    @Resource
+    private FileService fileService;
+
+    @Resource
+    private PicService picService;
+
     @PostMapping("/upload")
     public CommonResp upload(MultipartFile file, HttpServletRequest req) {
-        /**
-         * 获取tomcat容器中的路径
-         */
-        String path = req.getSession().getServletContext().getRealPath("load");
-        LOG.info("获取的tomcat路径为:"+path);
-
-        CommonResp resp = new CommonResp();
-        return resp;
+        CommonResp commonResp = new CommonResp();
+        String filePath = fileService.upload(file, req);
+        int res = picService.save(filePath);
+        if (res<=0) {
+            commonResp.setSuccess(false);
+            commonResp.setMessage("图片存储失败");
+        }
+        return commonResp;
     }
 
 }

@@ -15,8 +15,6 @@
 
 
 
-
-
         <!--登录及用户名显示-->
         <div style="margin-right: 40px">
             <router-link to="#" class="login-menu" v-show="user.id">
@@ -34,9 +32,15 @@
                 </el-popconfirm>
             </router-link>
 
-            <router-link to="/login" class="login-menu" v-show="!user.id">
-                <span>登录</span>
-            </router-link>
+
+            <div class="login-menu" v-show="!user.id">
+                <span>登录/注册</span>
+            </div>
+
+
+            <!--<router-link to="/login" class="login-menu" v-show="!user.id">-->
+
+            <!--</router-link>-->
         </div>
 
     </el-menu>
@@ -61,9 +65,9 @@
              * ------变量区------
              */
             const user = ref({
-                id: 1,
-                name: "FARO_Z",
-                password: "abc123"
+                // id: 1,
+                // name: "FARO_Z",
+                // password: "abc123"
             });
 
 

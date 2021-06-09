@@ -1,9 +1,9 @@
 package petfind.pojo;
 
-public class Demo {
+public class Pic {
     private Long id;
 
-    private String name;
+    private String path;
 
     public Long getId() {
         return id;
@@ -13,12 +13,12 @@ public class Demo {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getPath() {
+        return path;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPath(String path) {
+        this.path = path;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Demo {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", name=").append(name);
+        sb.append(", path=").append(path);
         sb.append("]");
         return sb.toString();
     }

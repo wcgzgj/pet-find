@@ -31,12 +31,45 @@
                 <i class="el-icon-bottom"></i>
             </div>
 
+            <!--vue 展示系统目录中的图片资源    需要使用 require 函数-->
+            <!--<el-image :src="require('/Users/faro_z/Pictures/风之谷/地下河流.jpg')"/>-->
 
-            <el-carousel :interval="2000" type="card" height="200px">
-                <el-carousel-item v-for="item in 6" :key="item" >
-                    <h3 class="medium">{{ item }}</h3>
-                </el-carousel-item>
-            </el-carousel>
+            <!--我发现轮播图的展示效果不太好，所以弃用了-->
+            <!--<el-carousel :interval="2000" type="card" height="200px">-->
+            <!--    <el-carousel-item v-for="pic in picPaths" :key="pic" >-->
+            <!--        <h3 class="medium">{{ pic.path }}</h3>-->
+            <!--        &lt;!&ndash;<el-image :src="pic.path"></el-image>&ndash;&gt;-->
+            <!--        &lt;!&ndash;{{pic.path}}&ndash;&gt;-->
+            <!--    </el-carousel-item>-->
+            <!--</el-carousel>-->
+
+
+            <el-card :body-style="{ padding: '0px' }">
+                <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+                <div style="padding: 14px;">
+                    <span>好吃的汉堡</span>
+                    <div class="bottom">
+                        <time class="time">{{ currentDate }}</time>
+                        <el-button type="text" class="button">操作按钮</el-button>
+                    </div>
+                </div>
+            </el-card>
+            <el-card :body-style="{ padding: '0px' }">
+                <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+                <div style="padding: 14px;">
+                    <span>好吃的汉堡</span>
+                    <div class="bottom">
+                        <time class="time">{{ currentDate }}</time>
+                        <el-button type="text" class="button">操作按钮</el-button>
+                    </div>
+                </div>
+            </el-card>
+
+
+
+
+            <!--下面，是获取本地路径的图片的方法，需要使用 require 函数-->
+            <!--<el-image :src="require('/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别/static/upload/56925777391915008.jpg')"></el-image>-->
 
         </el-main>
     </el-container>
@@ -45,7 +78,8 @@
 
 <script>
     import { defineComponent,onMounted,ref } from 'vue';
-    import axios from 'axios'
+    import axios from 'axios';
+    import { ElMessage } from 'element-plus'
 
     export default {
         name: "FindView",
@@ -68,12 +102,28 @@
             }
 
 
+            const picPaths = ref([]);
+
+            const getAllPicPath = () => {
+                axios.get("/pic/list").then(resp => {
+                    const data = resp.data;
+                    if (data.success) {
+                        picPaths.value=data.content;
+                        console.log("获取的图片路径为:"+picPaths.value);
+                    } else {
+                        ElMessage.error("图片路径获取失败！");
+                    }
+                })
+            }
+
             onMounted(()=>{
+                getAllPicPath();
             })
 
             return {
                 uploadHttpRequest,
-                fileList
+                fileList,
+                picPaths
             }
         }
 

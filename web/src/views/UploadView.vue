@@ -13,7 +13,7 @@
                     <el-upload
                             class="upload-demo"
                             drag
-                            action="/upload"
+                            action="http://localhost:9000/file/upload"
                             :before-upload="beforeupload"
                             :http-request="uploadHttpRequest"
                             limit="1"
@@ -49,6 +49,8 @@
 </template>
 
 <script>
+    import {AxiosInstance as axios} from "axios";
+
     export default {
         name: "UploadView",
 
@@ -73,7 +75,7 @@
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        alert('submit!');
+                        console.log("尝试访问后端接口");
                     } else {
                         console.log('error submit!!');
                         return false;
@@ -81,7 +83,7 @@
                 });
             },
             resetForm(formName) {
-                this.$refs[formName].resetFields();
+                axios.post("")
             }
         }
 }
