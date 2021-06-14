@@ -45,6 +45,7 @@ public class FileServiceImpl implements FileService {
         /**
          * 获取tomcat容器中的路径
          */
+        // this.getClass().getClassLoader().getResourceAsStream("/")
         String path = req.getSession().getServletContext().getRealPath("/upload");
         String originalFilename = file.getOriginalFilename();
 
