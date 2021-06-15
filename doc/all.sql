@@ -3,8 +3,10 @@ drop table if exists `pic`;
 create table `pic` (
                         `id` bigint not null comment 'id',
                         `path` varchar(255) comment '图片路径',
+                        `userId` bigint not null comment '用户id',
+                        `address` varchar(255) comment '发现地址',
                         primary key (`id`)
-) engine=innodb default charset =utf8mb4 comment '测试';
+) engine=innodb default charset =utf8mb4 comment '图片表';
 
 
 
@@ -16,7 +18,6 @@ create table `user` (
                        `realName` varchar(255) comment '真实名称',
                        `password` varchar(255) comment '登录密码',
                        `email` varchar(255) comment '邮箱',
-                       `picId` bigint not null comment '图片id',
                        `createTime` datetime comment '创建时间',
                        `loginTime` datetime comment '登录时间',
                        `address` varchar(255) comment '用户地址',

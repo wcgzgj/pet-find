@@ -1,11 +1,21 @@
 package petfind.pojo;
 
+import java.util.Date;
+
 public class User {
     private Long id;
 
-    private String path;
+    private String loginname;
 
-    private Integer phone;
+    private String realname;
+
+    private String password;
+
+    private String email;
+
+    private Date createtime;
+
+    private Date logintime;
 
     private String address;
 
@@ -17,20 +27,52 @@ public class User {
         this.id = id;
     }
 
-    public String getPath() {
-        return path;
+    public String getLoginname() {
+        return loginname;
     }
 
-    public void setPath(String path) {
-        this.path = path;
+    public void setLoginname(String loginname) {
+        this.loginname = loginname;
     }
 
-    public Integer getPhone() {
-        return phone;
+    public String getRealname() {
+        return realname;
     }
 
-    public void setPhone(Integer phone) {
-        this.phone = phone;
+    public void setRealname(String realname) {
+        this.realname = realname;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
+    }
+
+    public Date getLogintime() {
+        return logintime;
+    }
+
+    public void setLogintime(Date logintime) {
+        this.logintime = logintime;
     }
 
     public String getAddress() {
@@ -48,8 +90,12 @@ public class User {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", path=").append(path);
-        sb.append(", phone=").append(phone);
+        sb.append(", loginname=").append(loginname);
+        sb.append(", realname=").append(realname);
+        sb.append(", password=").append(password);
+        sb.append(", email=").append(email);
+        sb.append(", createtime=").append(createtime);
+        sb.append(", logintime=").append(logintime);
         sb.append(", address=").append(address);
         sb.append("]");
         return sb.toString();

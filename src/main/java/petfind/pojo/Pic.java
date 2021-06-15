@@ -5,6 +5,10 @@ public class Pic {
 
     private String path;
 
+    private Long userid;
+
+    private String address;
+
     public Long getId() {
         return id;
     }
@@ -21,6 +25,22 @@ public class Pic {
         this.path = path;
     }
 
+    public Long getUserid() {
+        return userid;
+    }
+
+    public void setUserid(Long userid) {
+        this.userid = userid;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -29,6 +49,8 @@ public class Pic {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", path=").append(path);
+        sb.append(", userid=").append(userid);
+        sb.append(", address=").append(address);
         sb.append("]");
         return sb.toString();
     }

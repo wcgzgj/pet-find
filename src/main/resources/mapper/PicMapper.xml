@@ -4,6 +4,8 @@
   <resultMap id="BaseResultMap" type="petfind.pojo.Pic">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="path" jdbcType="VARCHAR" property="path" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -64,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, `path`
+    id, `path`, userId, address
   </sql>
   <select id="selectByExample" parameterType="petfind.pojo.PicExample" resultMap="BaseResultMap">
     select
@@ -97,8 +99,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="petfind.pojo.Pic">
-    insert into pic (id, `path`)
-    values (#{id,jdbcType=BIGINT}, #{path,jdbcType=VARCHAR})
+    insert into pic (id, `path`, userId, 
+      address)
+    values (#{id,jdbcType=BIGINT}, #{path,jdbcType=VARCHAR}, #{userid,jdbcType=BIGINT}, 
+      #{address,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="petfind.pojo.Pic">
     insert into pic
@@ -109,6 +113,12 @@
       <if test="path != null">
         `path`,
       </if>
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -116,6 +126,12 @@
       </if>
       <if test="path != null">
         #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -134,6 +150,12 @@
       <if test="record.path != null">
         `path` = #{record.path,jdbcType=VARCHAR},
       </if>
+      <if test="record.userid != null">
+        userId = #{record.userid,jdbcType=BIGINT},
+      </if>
+      <if test="record.address != null">
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -142,7 +164,9 @@
   <update id="updateByExample" parameterType="map">
     update pic
     set id = #{record.id,jdbcType=BIGINT},
-      `path` = #{record.path,jdbcType=VARCHAR}
+      `path` = #{record.path,jdbcType=VARCHAR},
+      userId = #{record.userid,jdbcType=BIGINT},
+      address = #{record.address,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -153,12 +177,20 @@
       <if test="path != null">
         `path` = #{path,jdbcType=VARCHAR},
       </if>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="petfind.pojo.Pic">
     update pic
-    set `path` = #{path,jdbcType=VARCHAR}
+    set `path` = #{path,jdbcType=VARCHAR},
+      userId = #{userid,jdbcType=BIGINT},
+      address = #{address,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

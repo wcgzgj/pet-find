@@ -3,8 +3,12 @@
 <mapper namespace="petfind.mapper.UserMapper">
   <resultMap id="BaseResultMap" type="petfind.pojo.User">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="path" jdbcType="VARCHAR" property="path" />
-    <result column="phone" jdbcType="INTEGER" property="phone" />
+    <result column="loginName" jdbcType="VARCHAR" property="loginname" />
+    <result column="realName" jdbcType="VARCHAR" property="realname" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="loginTime" jdbcType="TIMESTAMP" property="logintime" />
     <result column="address" jdbcType="VARCHAR" property="address" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -66,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, `path`, phone, address
+    id, loginName, realName, `password`, email, createTime, loginTime, address
   </sql>
   <select id="selectByExample" parameterType="petfind.pojo.UserExample" resultMap="BaseResultMap">
     select
@@ -99,10 +103,12 @@
     </if>
   </delete>
   <insert id="insert" parameterType="petfind.pojo.User">
-    insert into user (id, `path`, phone, 
-      address)
-    values (#{id,jdbcType=BIGINT}, #{path,jdbcType=VARCHAR}, #{phone,jdbcType=INTEGER}, 
-      #{address,jdbcType=VARCHAR})
+    insert into user (id, loginName, realName, 
+      `password`, email, createTime, 
+      loginTime, address)
+    values (#{id,jdbcType=BIGINT}, #{loginname,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{logintime,jdbcType=TIMESTAMP}, #{address,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="petfind.pojo.User">
     insert into user
@@ -110,11 +116,23 @@
       <if test="id != null">
         id,
       </if>
-      <if test="path != null">
-        `path`,
+      <if test="loginname != null">
+        loginName,
       </if>
-      <if test="phone != null">
-        phone,
+      <if test="realname != null">
+        realName,
+      </if>
+      <if test="password != null">
+        `password`,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="logintime != null">
+        loginTime,
       </if>
       <if test="address != null">
         address,
@@ -124,11 +142,23 @@
       <if test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="path != null">
-        #{path,jdbcType=VARCHAR},
+      <if test="loginname != null">
+        #{loginname,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null">
-        #{phone,jdbcType=INTEGER},
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logintime != null">
+        #{logintime,jdbcType=TIMESTAMP},
       </if>
       <if test="address != null">
         #{address,jdbcType=VARCHAR},
@@ -147,11 +177,23 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.path != null">
-        `path` = #{record.path,jdbcType=VARCHAR},
+      <if test="record.loginname != null">
+        loginName = #{record.loginname,jdbcType=VARCHAR},
       </if>
-      <if test="record.phone != null">
-        phone = #{record.phone,jdbcType=INTEGER},
+      <if test="record.realname != null">
+        realName = #{record.realname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.password != null">
+        `password` = #{record.password,jdbcType=VARCHAR},
+      </if>
+      <if test="record.email != null">
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createtime != null">
+        createTime = #{record.createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.logintime != null">
+        loginTime = #{record.logintime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.address != null">
         address = #{record.address,jdbcType=VARCHAR},
@@ -164,8 +206,12 @@
   <update id="updateByExample" parameterType="map">
     update user
     set id = #{record.id,jdbcType=BIGINT},
-      `path` = #{record.path,jdbcType=VARCHAR},
-      phone = #{record.phone,jdbcType=INTEGER},
+      loginName = #{record.loginname,jdbcType=VARCHAR},
+      realName = #{record.realname,jdbcType=VARCHAR},
+      `password` = #{record.password,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      createTime = #{record.createtime,jdbcType=TIMESTAMP},
+      loginTime = #{record.logintime,jdbcType=TIMESTAMP},
       address = #{record.address,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -174,11 +220,23 @@
   <update id="updateByPrimaryKeySelective" parameterType="petfind.pojo.User">
     update user
     <set>
-      <if test="path != null">
-        `path` = #{path,jdbcType=VARCHAR},
+      <if test="loginname != null">
+        loginName = #{loginname,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null">
-        phone = #{phone,jdbcType=INTEGER},
+      <if test="realname != null">
+        realName = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        `password` = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logintime != null">
+        loginTime = #{logintime,jdbcType=TIMESTAMP},
       </if>
       <if test="address != null">
         address = #{address,jdbcType=VARCHAR},
@@ -188,8 +246,12 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="petfind.pojo.User">
     update user
-    set `path` = #{path,jdbcType=VARCHAR},
-      phone = #{phone,jdbcType=INTEGER},
+    set loginName = #{loginname,jdbcType=VARCHAR},
+      realName = #{realname,jdbcType=VARCHAR},
+      `password` = #{password,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      loginTime = #{logintime,jdbcType=TIMESTAMP},
       address = #{address,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>

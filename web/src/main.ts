@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+// import store from './store'
 import axios from 'axios'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
@@ -10,8 +10,8 @@ import 'ant-design-vue/dist/antd.css';
 axios.defaults.baseURL=process.env.VUE_APP_SERVER;
 
 const app = createApp(App)
-    app.use(store)
-        .use(router)
+    // app.use(store)
+        app.use(router)
         .use(Antd)
         .mount('#app')
 
