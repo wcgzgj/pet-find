@@ -8,13 +8,12 @@ spring:
     password: 19180319zZJ
     driver-class-name: com.mysql.cj.jdbc.Driver
   servlet:
-#    multipart:
-#      enabled: true
-#      file-size-threshold: 0
-#      max-file-size: 1MB
-#      max-request-size: 10MB
-#      resolve-lazily: false
-#      location: E:temp
+    multipart:
+      enabled: true
+      file-size-threshold: 0
+      max-file-size: 200MB
+      max-request-size: 200MB
+      resolve-lazily: false
 
 
 # 整合Mybatis

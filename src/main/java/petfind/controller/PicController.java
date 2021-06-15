@@ -1,5 +1,7 @@
 package petfind.controller;
 
+import org.apache.ibatis.annotations.Update;
+import org.aspectj.weaver.NewFieldTypeMunger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -7,11 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import petfind.req.PicFindInfoSaveReq;
 import petfind.resp.CommonResp;
+import petfind.resp.PicUploadResp;
 import petfind.service.PicService;
+import petfind.util.SnowFlake;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -30,6 +37,9 @@ public class PicController {
     @Resource
     private PicService picService;
 
+    @Resource
+    private SnowFlake snowFlake;
+
     @RequestMapping("/list")
     public CommonResp list() {
         List<String> list = picService.getAll();
@@ -39,32 +49,33 @@ public class PicController {
     }
 
 
-    @PostMapping("/upload")
-    public CommonResp upload(@RequestParam("file") MultipartFile file) {
-
-        LOG.info("待上传的文件信息为:",file);
-        LOG.info("待上传的文件名称为:",file.getOriginalFilename());
-
-        /**
-         * const status = info.file.status;
-         *    if (status !== 'uploading') {
-         *        console.log(info.file, info.fileList);
-         *    }
-         *
-         *    if (status === 'done') {
-         *        message.success(`${info.file.name} file uploaded successfully.`);
-         *    } else if (status === 'error') {
-         *        message.error(`${info.file.name} file upload failed.`);
-         *    }
-         */
-
+    /**
+     * 图片上传接口
+     * 将图片上传后，会将改名后的图片名称，以及其主键返回给前端
+     * @param file
+     * @param request
+     * @return
+     * @throws IOException
+     */
+    @PostMapping("/uploadPic")
+    public CommonResp upload(@RequestParam MultipartFile file,HttpServletRequest request) throws IOException {
+        PicUploadResp upload = picService.upload(file, request);
         CommonResp commonResp = new CommonResp();
-        // String filePath = fileService.upload(file, req);
-        // int res = picService.save(filePath);
-        // if (res<=0) {
-        //     commonResp.setSuccess(false);
-        //     commonResp.setMessage("图片存储失败");
-        // }
+        commonResp.setContent(upload);
+        return commonResp;
+    }
+
+
+    /**
+     * 更新图片的发现位置接口
+     * @param req
+     * @return
+     */
+    @PostMapping("/uploadFindInfo")
+    public CommonResp upload(PicFindInfoSaveReq req) {
+        picService.uploadFindInfo(req);
+        CommonResp commonResp = new CommonResp();
+
         return commonResp;
     }
 

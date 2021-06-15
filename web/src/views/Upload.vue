@@ -6,30 +6,22 @@
         </a-breadcrumb>
         <div :style="{ background: '#fff', padding: '24px', minHeight: '280px' }" class="card-display">
 
-            <!--上传控件-->
-            <!--<a-upload-->
-            <!--        v-model:file-list="fileList"-->
-            <!--        :multiple="false"-->
-            <!--        @beforeUpload="beforeUpload"-->
-            <!--        @change="handleChange"-->
-            <!--&gt;-->
-            <!--    <a-button>-->
-            <!--        <upload-outlined></upload-outlined>-->
-            <!--        Click to Upload-->
-            <!--    </a-button>-->
             <!--</a-upload>-->
             <input type="file" v-on:change="uploadImage" id="file-upload-input">
 
 
+
             <!--志愿者信息表单-->
             <a-form
-                    title="登录表单"
-                    @ok="upload"
+                    title="上传表单"
                     style="margin-top: 40px"
             >
-
-                <a-form-item required label="发现地址" name="address">
-                    <a-input v-model:value="formState.name" type="text" placeholder="请输入发现地"/>
+                <a-form-item label="发现地址:" name="address">
+                    <a-input v-model:value="formState.address" type="text" placeholder="请输入发现地"/>
+                </a-form-item>
+                <a-form-item :wrapper-col="{ span: 14, offset: 4 }">
+                    <a-button type="primary" @click="uploadInfo">确认</a-button>
+                    <a-button style="margin-left: 10px" @click="reset">重置</a-button>
                 </a-form-item>
 
             </a-form>
@@ -60,45 +52,24 @@
             /**
              * 图片上传信息
              */
-            const handleChange = () => {
-                if (fileList.value.length==0) {
-                    message.error("请选择待上传的图片")
-                    return false;
-                }
-                let formData = new FormData();
-                formData.append("file",fileList.value[0]);
-                console.log("等待上传的文件信息为:"+formData.get("file"));
-                axios.post("/pic/upload",formData).then(resp=>{
-                    const data = resp.data;
-                    if (data.success) {
-                        message.success("图片上传成功")
-                    } else {
-                        message.error(data.message);
-                    }
-                })
-            };
-
             const uploadImage = () => {
                 let formData = new FormData();
+                console.log("当前文件的个数为："+document.querySelector("#file-upload-input").files.length);
                 let file = document.querySelector("#file-upload-input").files[0];
-                console.log("获取的文件信息为:"+file);
-                formData.append("file",document.querySelector("#file-upload-input").files[0])
+                formData.append("file",file)
                 console.log("等待上传的文件信息为:"+formData.get("file"));
-                axios.post("/pic/upload",formData).then(resp=>{
+                axios.post("/pic/uploadPic",formData).then(resp=>{
                     const data = resp.data;
                     if (data.success) {
                         message.success("图片上传成功")
+                        formState.value.newPicId=data.content.newPicId;
+                        console.log("回显的图片信息为："+formState.value.newPicId);
                     } else {
                         message.error(data.message);
                     }
                 })
             }
 
-            const beforeUpload = () => {
-                return false;
-            }
-
-            const fileList = ref([]);
 
 
 
@@ -107,20 +78,29 @@
              * @type {ToRef<{address: string}>}
              */
             const formState = ref({
-                address:""
+                address:"",
+                newPicId:""
             });
 
-            const update = () => {
-                if (fileList.value.length==0) {
-                    message.error("错误，请先上传图片");
+            const uploadInfo = () => {
+                if (formState.value.newPicId==null || formState.value.newPicId.length==0) {
+                    message.error("请先上传正确的图片");
                     return false;
                 }
-                axios.post("/")
+                if (formState.value.address==null || formState.value.address.length==0) {
+                    message.error("请输入发现地址");
+                    return false;
+                }
+
+                axios.post("/pic/uploadFindInfo",formState).then(resp=>{
+
+                })
             }
 
-
-
-
+            //清空表单信息
+            const reset = () => {
+                formState.value.address="";
+            }
 
 
 
@@ -128,12 +108,9 @@
                 /**
                  * 图片上传信息
                  */
-                fileList,
                 headers: {
                     authorization: 'authorization-text',
                 },
-                handleChange,
-                beforeUpload,
                 uploadImage,
 
 
@@ -141,7 +118,8 @@
                  * 表单信息
                  */
                 formState,
-                update
+                uploadInfo,
+                reset
             }
         },
     }
