@@ -4,10 +4,7 @@ import org.apache.ibatis.annotations.Update;
 import org.aspectj.weaver.NewFieldTypeMunger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import petfind.req.PicFindInfoSaveReq;
 import petfind.resp.CommonResp;
@@ -17,6 +14,7 @@ import petfind.util.SnowFlake;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -72,7 +70,7 @@ public class PicController {
      * @return
      */
     @PostMapping("/uploadFindInfo")
-    public CommonResp upload(PicFindInfoSaveReq req) {
+    public CommonResp uploadFindInfo(@RequestBody @Valid PicFindInfoSaveReq req) {
         picService.uploadFindInfo(req);
         CommonResp commonResp = new CommonResp();
 

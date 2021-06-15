@@ -92,13 +92,20 @@
                     return false;
                 }
 
-                axios.post("/pic/uploadFindInfo",formState).then(resp=>{
-
+                axios.post("/pic/uploadFindInfo",formState.value).then(resp=>{
+                    const data = resp.data;
+                    if (data.success) {
+                        message.success("查询信息提交成功");
+                        reset();
+                    } else {
+                        message.error("上传错误");
+                    }
                 })
             }
 
             //清空表单信息
             const reset = () => {
+
                 formState.value.address="";
             }
 

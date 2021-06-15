@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotEmpty;
+
 /**
  * @ClassName PicFindInfoSaveReq
  * @Description 图片上传信息请求
@@ -16,6 +18,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class PicFindInfoSaveReq {
+
+    @NotEmpty(message = "图片id不能为空")
     private String newPicId;
+
+    @NotEmpty(message = "发现地址不能为空")
     private String address;
 }
