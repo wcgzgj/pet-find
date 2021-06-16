@@ -140,9 +140,10 @@ public class PicServiceImpl implements PicService {
         Pic pic = new Pic();
         pic.setAddress(req.getAddress());
         pic.setId(Long.parseLong(req.getNewPicId()));
-        pic.setUserid(req.getUserId());
+        pic.setUserid(Long.parseLong(req.getUserId()));
         /**
          * 更新已经存在数据库中的图片的发现地址
+         * 和上传该图片的用户的信息
          */
         picMapper.updateByPrimaryKeySelective(pic);
     }

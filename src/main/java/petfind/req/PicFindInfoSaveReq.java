@@ -25,5 +25,6 @@ public class PicFindInfoSaveReq {
     @NotEmpty(message = "发现地址不能为空")
     private String address;
 
-    private Long userId;
+    @NotEmpty(message = "用户 id 不能为空")
+    private String userId;
 }

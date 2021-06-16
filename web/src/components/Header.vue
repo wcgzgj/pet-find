@@ -161,7 +161,7 @@
              * 注销界面
              */
             const logout = () => {
-                axios.post("/user/logout").then(resp=>{
+                axios.post("/user/logout/"+user.value.id).then(resp=>{
                     const data=resp.data;
                     if (data.success) {
                         message.success("退出成功");

@@ -990,3 +990,631 @@ java.lang.NullPointerException: null
 2021-06-16 15:26:55.632 INFO  petfind.config.CorsConfig                         :35   [32m                  [0;39m 外部尝试访问磁盘图片
 2021-06-16 15:26:56.444 INFO  petfind.PetFindApplicationTests                   :61   [32m                  [0;39m Started PetFindApplicationTests in 4.124 seconds (JVM running for 5.127)
 2021-06-16 15:27:03.603 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:36:03.988 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:36:08.260 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.1.7.Final
+2021-06-16 15:36:08.272 INFO  petfind.config.PetFindApplication                 :55   [32m                  [0;39m Starting PetFindApplication using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 86301 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别)
+2021-06-16 15:36:08.273 INFO  petfind.config.PetFindApplication                 :675  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-16 15:36:08.315 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-16 15:36:08.315 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-16 15:36:09.023 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :250  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-16 15:36:09.026 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :128  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-16 15:36:09.044 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :188  [32m                  [0;39m Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-06-16 15:36:09.782 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-16 15:36:09.791 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:36:09.791 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-16 15:36:09.791 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-16 15:36:09.853 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-16 15:36:09.853 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1537 ms
+2021-06-16 15:36:10.672 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:36:10.810 INFO  petfind.config.CorsConfig                         :35   [32m                  [0;39m 外部尝试访问磁盘图片
+2021-06-16 15:36:11.063 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-16 15:36:11.081 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:36:11.108 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-16 15:36:11.118 INFO  petfind.config.PetFindApplication                 :61   [32m                  [0;39m Started PetFindApplication in 3.221 seconds (JVM running for 3.796)
+2021-06-16 15:36:25.824 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 15:36:25.828 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-16 15:36:25.842 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 13 ms
+2021-06-16 15:36:25.934 INFO  petfind.aspect.LogAspect                          :62   [32m60271250613866496 [0;39m ------------- 开始 -------------
+2021-06-16 15:36:25.935 INFO  petfind.aspect.LogAspect                          :63   [32m60271250613866496 [0;39m 请求地址: http://127.0.0.1:9000/user/logout/1 POST
+2021-06-16 15:36:25.936 INFO  petfind.aspect.LogAspect                          :64   [32m60271250613866496 [0;39m 类名方法: petfind.controller.UserController.logout
+2021-06-16 15:36:25.936 INFO  petfind.aspect.LogAspect                          :65   [32m60271250613866496 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:36:25.997 INFO  petfind.aspect.LogAspect                          :87   [32m60271250613866496 [0;39m 请求参数: ["1"]
+2021-06-16 15:36:26.006 INFO  petfind.controller.UserController                 :74   [32m60271250613866496 [0;39m 待删除的用户的id为：1
+2021-06-16 15:36:26.755 INFO  petfind.aspect.LogAspect                          :99   [32m60271250613866496 [0;39m 返回结果: {"success":true}
+2021-06-16 15:36:26.755 INFO  petfind.aspect.LogAspect                          :100  [32m60271250613866496 [0;39m ------------- 结束 耗时：823 ms -------------
+2021-06-16 15:36:41.404 INFO  petfind.aspect.LogAspect                          :62   [32m60271315508137984 [0;39m ------------- 开始 -------------
+2021-06-16 15:36:41.405 INFO  petfind.aspect.LogAspect                          :63   [32m60271315508137984 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-16 15:36:41.405 INFO  petfind.aspect.LogAspect                          :64   [32m60271315508137984 [0;39m 类名方法: petfind.controller.UserController.login
+2021-06-16 15:36:41.406 INFO  petfind.aspect.LogAspect                          :65   [32m60271315508137984 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:36:41.408 INFO  petfind.aspect.LogAspect                          :87   [32m60271315508137984 [0;39m 请求参数: [{"loginname":"admin"}]
+2021-06-16 15:36:41.415 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m60271315508137984 [0;39m HikariPool-1 - Starting...
+2021-06-16 15:36:42.246 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m60271315508137984 [0;39m HikariPool-1 - Start completed.
+2021-06-16 15:36:42.716 ERROR petfind.controller.ControllerExceptionHandler     :71   [32m60271315508137984 [0;39m 系统异常：
+org.springframework.data.redis.serializer.SerializationException: Cannot serialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [petfind.pojo.User]
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.serialize(JdkSerializationRedisSerializer.java:96)
+	at org.springframework.data.redis.core.AbstractOperations.rawValue(AbstractOperations.java:127)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:254)
+	at petfind.controller.UserController.login(UserController.java:59)
+	at petfind.controller.UserController$$FastClassBySpringCGLIB$$249d6f63.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at petfind.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at petfind.controller.UserController$$EnhancerBySpringCGLIB$$c1955a04.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [petfind.pojo.User]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:64)
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:33)
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.serialize(JdkSerializationRedisSerializer.java:94)
+	... 77 common frames omitted
+Caused by: java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [petfind.pojo.User]
+	at org.springframework.core.serializer.DefaultSerializer.serialize(DefaultSerializer.java:43)
+	at org.springframework.core.serializer.Serializer.serializeToByteArray(Serializer.java:56)
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:60)
+	... 79 common frames omitted
+2021-06-16 15:36:42.720 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m60271315508137984 [0;39m Resolved [org.springframework.data.redis.serializer.SerializationException: Cannot serialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [petfind.pojo.User]]
+2021-06-16 15:37:22.908 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:37:23.093 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-16 15:37:23.108 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-16 15:37:27.043 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.1.7.Final
+2021-06-16 15:37:27.055 INFO  petfind.config.PetFindApplication                 :55   [32m                  [0;39m Starting PetFindApplication using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 86329 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别)
+2021-06-16 15:37:27.055 INFO  petfind.config.PetFindApplication                 :675  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-16 15:37:27.090 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-16 15:37:27.091 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-16 15:37:27.766 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :250  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-16 15:37:27.767 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :128  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-16 15:37:27.784 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :188  [32m                  [0;39m Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2021-06-16 15:37:28.444 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-16 15:37:28.451 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:37:28.451 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-16 15:37:28.451 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-16 15:37:28.501 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-16 15:37:28.501 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1409 ms
+2021-06-16 15:37:29.260 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:37:29.361 INFO  petfind.config.CorsConfig                         :35   [32m                  [0;39m 外部尝试访问磁盘图片
+2021-06-16 15:37:29.615 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-16 15:37:29.630 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:37:29.656 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-16 15:37:29.667 INFO  petfind.config.PetFindApplication                 :61   [32m                  [0;39m Started PetFindApplication in 2.958 seconds (JVM running for 3.515)
+2021-06-16 15:37:38.692 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 15:37:38.693 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-16 15:37:38.696 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2021-06-16 15:37:38.864 INFO  petfind.aspect.LogAspect                          :62   [32m60271556508651520 [0;39m ------------- 开始 -------------
+2021-06-16 15:37:38.865 INFO  petfind.aspect.LogAspect                          :63   [32m60271556508651520 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-16 15:37:38.865 INFO  petfind.aspect.LogAspect                          :64   [32m60271556508651520 [0;39m 类名方法: petfind.controller.UserController.login
+2021-06-16 15:37:38.866 INFO  petfind.aspect.LogAspect                          :65   [32m60271556508651520 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:37:38.941 INFO  petfind.aspect.LogAspect                          :87   [32m60271556508651520 [0;39m 请求参数: [{"loginname":"admin"}]
+2021-06-16 15:37:38.963 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m60271556508651520 [0;39m HikariPool-1 - Starting...
+2021-06-16 15:37:39.328 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m60271556508651520 [0;39m HikariPool-1 - Start completed.
+2021-06-16 15:37:40.047 INFO  petfind.aspect.LogAspect                          :99   [32m60271556508651520 [0;39m 返回结果: {"content":{"email":"123@qq.com","id":1,"loginname":"admin","realname":"管理员"},"success":true}
+2021-06-16 15:37:40.048 INFO  petfind.aspect.LogAspect                          :100  [32m60271556508651520 [0;39m ------------- 结束 耗时：1184 ms -------------
+2021-06-16 15:37:50.931 INFO  petfind.aspect.LogAspect                          :62   [32m60271607125512192 [0;39m ------------- 开始 -------------
+2021-06-16 15:37:50.932 INFO  petfind.aspect.LogAspect                          :63   [32m60271607125512192 [0;39m 请求地址: http://127.0.0.1:9000/user/logout/1 POST
+2021-06-16 15:37:50.932 INFO  petfind.aspect.LogAspect                          :64   [32m60271607125512192 [0;39m 类名方法: petfind.controller.UserController.logout
+2021-06-16 15:37:50.932 INFO  petfind.aspect.LogAspect                          :65   [32m60271607125512192 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:37:50.933 INFO  petfind.aspect.LogAspect                          :87   [32m60271607125512192 [0;39m 请求参数: ["1"]
+2021-06-16 15:37:50.933 INFO  petfind.controller.UserController                 :75   [32m60271607125512192 [0;39m 待删除的用户的id为：1
+2021-06-16 15:37:50.958 INFO  petfind.aspect.LogAspect                          :99   [32m60271607125512192 [0;39m 返回结果: {"success":true}
+2021-06-16 15:37:50.959 INFO  petfind.aspect.LogAspect                          :100  [32m60271607125512192 [0;39m ------------- 结束 耗时：28 ms -------------
+2021-06-16 15:42:51.032 INFO  io.lettuce.core.protocol.ConnectionWatchdog       :171  [32m                  [0;39m Reconnecting, last destination was r-uf6eadbd897d91e4pd.redis.rds.aliyuncs.com/47.101.239.232:6379
+2021-06-16 15:42:51.181 INFO  io.lettuce.core.protocol.ReconnectionHandler      :164  [32m                  [0;39m Reconnected to r-uf6eadbd897d91e4pd.redis.rds.aliyuncs.com:6379
+2021-06-16 15:47:51.224 INFO  io.lettuce.core.protocol.ConnectionWatchdog       :171  [32m                  [0;39m Reconnecting, last destination was r-uf6eadbd897d91e4pd.redis.rds.aliyuncs.com/47.101.239.232:6379
+2021-06-16 15:47:51.666 INFO  io.lettuce.core.protocol.ReconnectionHandler      :164  [32m                  [0;39m Reconnected to r-uf6eadbd897d91e4pd.redis.rds.aliyuncs.com:6379
+2021-06-16 15:51:08.436 INFO  petfind.aspect.LogAspect                          :62   [32m60274952099729408 [0;39m ------------- 开始 -------------
+2021-06-16 15:51:08.452 INFO  petfind.aspect.LogAspect                          :63   [32m60274952099729408 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-16 15:51:08.453 INFO  petfind.aspect.LogAspect                          :64   [32m60274952099729408 [0;39m 类名方法: petfind.controller.UserController.login
+2021-06-16 15:51:08.453 INFO  petfind.aspect.LogAspect                          :65   [32m60274952099729408 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:51:08.455 INFO  petfind.aspect.LogAspect                          :87   [32m60274952099729408 [0;39m 请求参数: [{"loginname":"admin"}]
+2021-06-16 15:51:08.569 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3615e55b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:08.574 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c5f6622 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:08.576 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5912b477 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:08.577 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@28a47133 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:08.580 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@14427aa6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:08.582 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@338b707a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:08.583 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ff6cb70 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:08.588 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74501054 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:08.590 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b207580 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:08.591 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m60274952099729408 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@52c480df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-16 15:51:09.171 INFO  petfind.aspect.LogAspect                          :99   [32m60274952099729408 [0;39m 返回结果: {"content":{"email":"123@qq.com","id":1,"loginname":"admin","realname":"管理员"},"success":true}
+2021-06-16 15:51:09.172 INFO  petfind.aspect.LogAspect                          :100  [32m60274952099729408 [0;39m ------------- 结束 耗时：737 ms -------------
+2021-06-16 15:52:00.324 INFO  petfind.aspect.LogAspect                          :62   [32m60275169737969664 [0;39m ------------- 开始 -------------
+2021-06-16 15:52:00.337 INFO  petfind.aspect.LogAspect                          :63   [32m60275169737969664 [0;39m 请求地址: http://127.0.0.1:9000/pic/uploadPic POST
+2021-06-16 15:52:00.337 INFO  petfind.aspect.LogAspect                          :64   [32m60275169737969664 [0;39m 类名方法: petfind.controller.PicController.upload
+2021-06-16 15:52:00.338 INFO  petfind.aspect.LogAspect                          :65   [32m60275169737969664 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:52:00.341 INFO  petfind.aspect.LogAspect                          :87   [32m60275169737969664 [0;39m 请求参数: [null,null]
+2021-06-16 15:52:00.361 INFO  petfind.service.impl.PicServiceImpl               :87   [32m60275169737969664 [0;39m 获取的文件名为:4.jpg
+2021-06-16 15:52:00.361 INFO  petfind.service.impl.PicServiceImpl               :93   [32m60275169737969664 [0;39m 获取的文件后缀为:.jpg
+2021-06-16 15:52:00.376 INFO  petfind.service.impl.PicServiceImpl               :117  [32m60275169737969664 [0;39m 待插入的图片主键为
+2021-06-16 15:52:00.555 INFO  petfind.aspect.LogAspect                          :99   [32m60275169737969664 [0;39m 返回结果: {"content":{"newPicId":"60275169951879168","newPicName":"60275169939296256.jpg","newPicPath":"http://127.0.0.1:9000/disPic/60275169939296256.jpg"},"success":true}
+2021-06-16 15:52:00.555 INFO  petfind.aspect.LogAspect                          :100  [32m60275169737969664 [0;39m ------------- 结束 耗时：231 ms -------------
+2021-06-16 15:52:03.445 INFO  petfind.aspect.LogAspect                          :62   [32m60275182828392448 [0;39m ------------- 开始 -------------
+2021-06-16 15:52:03.445 INFO  petfind.aspect.LogAspect                          :63   [32m60275182828392448 [0;39m 请求地址: http://127.0.0.1:9000/pic/uploadFindInfo POST
+2021-06-16 15:52:03.446 INFO  petfind.aspect.LogAspect                          :64   [32m60275182828392448 [0;39m 类名方法: petfind.controller.PicController.uploadFindInfo
+2021-06-16 15:52:03.446 INFO  petfind.aspect.LogAspect                          :65   [32m60275182828392448 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:52:03.450 INFO  petfind.aspect.LogAspect                          :87   [32m60275182828392448 [0;39m 请求参数: [{"address":"朝阳","newPicId":"60275169951879168"},null]
+2021-06-16 15:52:03.493 ERROR petfind.controller.ControllerExceptionHandler     :71   [32m60275182828392448 [0;39m 系统异常：
+java.lang.NullPointerException: null
+	at petfind.controller.PicController.uploadFindInfo(PicController.java:107)
+	at petfind.controller.PicController$$FastClassBySpringCGLIB$$5e5da3aa.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at petfind.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at petfind.controller.PicController$$EnhancerBySpringCGLIB$$8eb95b39.uploadFindInfo(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-16 15:52:03.503 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m60275182828392448 [0;39m Resolved [java.lang.NullPointerException]
+2021-06-16 15:53:02.229 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:53:02.405 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-16 15:53:02.414 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-16 15:53:06.557 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.1.7.Final
+2021-06-16 15:53:06.561 INFO  petfind.config.PetFindApplication                 :55   [32m                  [0;39m Starting PetFindApplication using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 86475 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别)
+2021-06-16 15:53:06.566 INFO  petfind.config.PetFindApplication                 :675  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-16 15:53:06.599 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-16 15:53:06.600 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-16 15:53:07.281 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :250  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-16 15:53:07.283 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :128  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-16 15:53:07.299 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :188  [32m                  [0;39m Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2021-06-16 15:53:07.982 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-16 15:53:07.988 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:53:07.989 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-16 15:53:07.989 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-16 15:53:08.041 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-16 15:53:08.041 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1440 ms
+2021-06-16 15:53:08.759 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:53:08.866 INFO  petfind.config.CorsConfig                         :35   [32m                  [0;39m 外部尝试访问磁盘图片
+2021-06-16 15:53:09.109 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-16 15:53:09.125 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:53:09.151 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-16 15:53:09.163 INFO  petfind.config.PetFindApplication                 :61   [32m                  [0;39m Started PetFindApplication in 2.944 seconds (JVM running for 3.512)
+2021-06-16 15:53:14.728 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 15:53:14.729 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-16 15:53:14.731 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2021-06-16 15:53:14.774 INFO  petfind.aspect.LogAspect                          :62   [32m60275481999708160 [0;39m ------------- 开始 -------------
+2021-06-16 15:53:14.775 INFO  petfind.aspect.LogAspect                          :63   [32m60275481999708160 [0;39m 请求地址: http://127.0.0.1:9000/user/logout/1 POST
+2021-06-16 15:53:14.776 INFO  petfind.aspect.LogAspect                          :64   [32m60275481999708160 [0;39m 类名方法: petfind.controller.UserController.logout
+2021-06-16 15:53:14.776 INFO  petfind.aspect.LogAspect                          :65   [32m60275481999708160 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:53:14.815 INFO  petfind.aspect.LogAspect                          :87   [32m60275481999708160 [0;39m 请求参数: ["1"]
+2021-06-16 15:53:14.820 INFO  petfind.controller.UserController                 :75   [32m60275481999708160 [0;39m 待删除的用户的id为：1
+2021-06-16 15:53:15.196 INFO  petfind.aspect.LogAspect                          :99   [32m60275481999708160 [0;39m 返回结果: {"success":true}
+2021-06-16 15:53:15.196 INFO  petfind.aspect.LogAspect                          :100  [32m60275481999708160 [0;39m ------------- 结束 耗时：423 ms -------------
+2021-06-16 15:53:20.271 INFO  petfind.aspect.LogAspect                          :62   [32m60275505055797248 [0;39m ------------- 开始 -------------
+2021-06-16 15:53:20.271 INFO  petfind.aspect.LogAspect                          :63   [32m60275505055797248 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-16 15:53:20.271 INFO  petfind.aspect.LogAspect                          :64   [32m60275505055797248 [0;39m 类名方法: petfind.controller.UserController.login
+2021-06-16 15:53:20.271 INFO  petfind.aspect.LogAspect                          :65   [32m60275505055797248 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:53:20.274 INFO  petfind.aspect.LogAspect                          :87   [32m60275505055797248 [0;39m 请求参数: [{"loginname":"admin"}]
+2021-06-16 15:53:20.279 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m60275505055797248 [0;39m HikariPool-1 - Starting...
+2021-06-16 15:53:20.718 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m60275505055797248 [0;39m HikariPool-1 - Start completed.
+2021-06-16 15:53:21.196 INFO  petfind.aspect.LogAspect                          :99   [32m60275505055797248 [0;39m 返回结果: {"content":{"email":"123@qq.com","id":1,"loginname":"admin","realname":"管理员"},"success":true}
+2021-06-16 15:53:21.197 INFO  petfind.aspect.LogAspect                          :100  [32m60275505055797248 [0;39m ------------- 结束 耗时：927 ms -------------
+2021-06-16 15:53:26.838 INFO  petfind.aspect.LogAspect                          :62   [32m60275532603985920 [0;39m ------------- 开始 -------------
+2021-06-16 15:53:26.840 INFO  petfind.aspect.LogAspect                          :63   [32m60275532603985920 [0;39m 请求地址: http://127.0.0.1:9000/pic/uploadPic POST
+2021-06-16 15:53:26.840 INFO  petfind.aspect.LogAspect                          :64   [32m60275532603985920 [0;39m 类名方法: petfind.controller.PicController.upload
+2021-06-16 15:53:26.840 INFO  petfind.aspect.LogAspect                          :65   [32m60275532603985920 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:53:26.840 INFO  petfind.aspect.LogAspect                          :87   [32m60275532603985920 [0;39m 请求参数: [null]
+2021-06-16 15:53:26.844 INFO  petfind.service.impl.PicServiceImpl               :87   [32m60275532603985920 [0;39m 获取的文件名为:4.jpg
+2021-06-16 15:53:26.844 INFO  petfind.service.impl.PicServiceImpl               :93   [32m60275532603985920 [0;39m 获取的文件后缀为:.jpg
+2021-06-16 15:53:26.848 INFO  petfind.service.impl.PicServiceImpl               :117  [32m60275532603985920 [0;39m 待插入的图片主键为
+2021-06-16 15:53:26.976 INFO  petfind.aspect.LogAspect                          :99   [32m60275532603985920 [0;39m 返回结果: {"content":{"newPicId":"60275532645928960","newPicName":"60275532637540352.jpg","newPicPath":"http://127.0.0.1:9000/disPic/60275532637540352.jpg"},"success":true}
+2021-06-16 15:53:26.976 INFO  petfind.aspect.LogAspect                          :100  [32m60275532603985920 [0;39m ------------- 结束 耗时：138 ms -------------
+2021-06-16 15:53:29.842 INFO  petfind.aspect.LogAspect                          :62   [32m60275545203675136 [0;39m ------------- 开始 -------------
+2021-06-16 15:53:29.842 INFO  petfind.aspect.LogAspect                          :63   [32m60275545203675136 [0;39m 请求地址: http://127.0.0.1:9000/pic/uploadFindInfo POST
+2021-06-16 15:53:29.843 INFO  petfind.aspect.LogAspect                          :64   [32m60275545203675136 [0;39m 类名方法: petfind.controller.PicController.uploadFindInfo
+2021-06-16 15:53:29.844 INFO  petfind.aspect.LogAspect                          :65   [32m60275545203675136 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:53:29.845 INFO  petfind.aspect.LogAspect                          :87   [32m60275545203675136 [0;39m 请求参数: [{"address":"江苏省南京市栖霞区仙林街道南京师范大学仙林校区西区","newPicId":"60275532645928960"}]
+2021-06-16 15:53:29.849 ERROR petfind.controller.ControllerExceptionHandler     :71   [32m60275545203675136 [0;39m 系统异常：
+java.lang.NullPointerException: null
+	at petfind.controller.PicController.uploadFindInfo(PicController.java:103)
+	at petfind.controller.PicController$$FastClassBySpringCGLIB$$5e5da3aa.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at petfind.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at petfind.controller.PicController$$EnhancerBySpringCGLIB$$6bdbca2f.uploadFindInfo(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-16 15:53:29.851 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m60275545203675136 [0;39m Resolved [java.lang.NullPointerException]
+2021-06-16 15:54:42.962 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:54:43.116 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-16 15:54:43.139 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-16 15:54:47.898 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.1.7.Final
+2021-06-16 15:54:47.908 INFO  petfind.config.PetFindApplication                 :55   [32m                  [0;39m Starting PetFindApplication using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 86500 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别)
+2021-06-16 15:54:47.908 INFO  petfind.config.PetFindApplication                 :675  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-16 15:54:47.942 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-16 15:54:47.943 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-16 15:54:48.533 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :250  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-16 15:54:48.536 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :128  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-16 15:54:48.555 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :188  [32m                  [0;39m Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2021-06-16 15:54:49.330 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-16 15:54:49.338 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:54:49.339 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-16 15:54:49.339 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-16 15:54:49.397 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-16 15:54:49.397 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1454 ms
+2021-06-16 15:54:50.170 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:54:50.281 INFO  petfind.config.CorsConfig                         :35   [32m                  [0;39m 外部尝试访问磁盘图片
+2021-06-16 15:54:50.536 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-16 15:54:50.552 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:54:50.579 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-16 15:54:50.588 INFO  petfind.config.PetFindApplication                 :61   [32m                  [0;39m Started PetFindApplication in 3.028 seconds (JVM running for 3.61)
+2021-06-16 15:54:59.277 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 15:54:59.278 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-16 15:54:59.283 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 4 ms
+2021-06-16 15:54:59.340 INFO  petfind.aspect.LogAspect                          :62   [32m60275920581300224 [0;39m ------------- 开始 -------------
+2021-06-16 15:54:59.341 INFO  petfind.aspect.LogAspect                          :63   [32m60275920581300224 [0;39m 请求地址: http://127.0.0.1:9000/user/logout/1 POST
+2021-06-16 15:54:59.342 INFO  petfind.aspect.LogAspect                          :64   [32m60275920581300224 [0;39m 类名方法: petfind.controller.UserController.logout
+2021-06-16 15:54:59.342 INFO  petfind.aspect.LogAspect                          :65   [32m60275920581300224 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:54:59.389 INFO  petfind.aspect.LogAspect                          :87   [32m60275920581300224 [0;39m 请求参数: ["1"]
+2021-06-16 15:54:59.395 INFO  petfind.controller.UserController                 :75   [32m60275920581300224 [0;39m 待删除的用户的id为：1
+2021-06-16 15:55:00.297 INFO  petfind.aspect.LogAspect                          :99   [32m60275920581300224 [0;39m 返回结果: {"success":true}
+2021-06-16 15:55:00.297 INFO  petfind.aspect.LogAspect                          :100  [32m60275920581300224 [0;39m ------------- 结束 耗时：958 ms -------------
+2021-06-16 15:55:05.588 INFO  petfind.aspect.LogAspect                          :62   [32m60275946791505920 [0;39m ------------- 开始 -------------
+2021-06-16 15:55:05.590 INFO  petfind.aspect.LogAspect                          :63   [32m60275946791505920 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-16 15:55:05.590 INFO  petfind.aspect.LogAspect                          :64   [32m60275946791505920 [0;39m 类名方法: petfind.controller.UserController.login
+2021-06-16 15:55:05.591 INFO  petfind.aspect.LogAspect                          :65   [32m60275946791505920 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:55:05.596 INFO  petfind.aspect.LogAspect                          :87   [32m60275946791505920 [0;39m 请求参数: [{"loginname":"admin"}]
+2021-06-16 15:55:05.601 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m60275946791505920 [0;39m HikariPool-1 - Starting...
+2021-06-16 15:55:05.946 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m60275946791505920 [0;39m HikariPool-1 - Start completed.
+2021-06-16 15:55:06.404 INFO  petfind.aspect.LogAspect                          :99   [32m60275946791505920 [0;39m 返回结果: {"content":{"email":"123@qq.com","id":1,"loginname":"admin","realname":"管理员"},"success":true}
+2021-06-16 15:55:06.404 INFO  petfind.aspect.LogAspect                          :100  [32m60275946791505920 [0;39m ------------- 结束 耗时：816 ms -------------
+2021-06-16 15:55:15.279 INFO  petfind.aspect.LogAspect                          :62   [32m60275987438505984 [0;39m ------------- 开始 -------------
+2021-06-16 15:55:15.280 INFO  petfind.aspect.LogAspect                          :63   [32m60275987438505984 [0;39m 请求地址: http://127.0.0.1:9000/pic/uploadPic POST
+2021-06-16 15:55:15.281 INFO  petfind.aspect.LogAspect                          :64   [32m60275987438505984 [0;39m 类名方法: petfind.controller.PicController.upload
+2021-06-16 15:55:15.281 INFO  petfind.aspect.LogAspect                          :65   [32m60275987438505984 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:55:15.282 INFO  petfind.aspect.LogAspect                          :87   [32m60275987438505984 [0;39m 请求参数: [null]
+2021-06-16 15:55:15.288 INFO  petfind.service.impl.PicServiceImpl               :87   [32m60275987438505984 [0;39m 获取的文件名为:3.jpg
+2021-06-16 15:55:15.288 INFO  petfind.service.impl.PicServiceImpl               :93   [32m60275987438505984 [0;39m 获取的文件后缀为:.jpg
+2021-06-16 15:55:15.294 INFO  petfind.service.impl.PicServiceImpl               :117  [32m60275987438505984 [0;39m 待插入的图片主键为
+2021-06-16 15:55:15.380 INFO  petfind.aspect.LogAspect                          :99   [32m60275987438505984 [0;39m 返回结果: {"content":{"newPicId":"60275987501420544","newPicName":"60275987493031936.jpg","newPicPath":"http://127.0.0.1:9000/disPic/60275987493031936.jpg"},"success":true}
+2021-06-16 15:55:15.381 INFO  petfind.aspect.LogAspect                          :100  [32m60275987438505984 [0;39m ------------- 结束 耗时：102 ms -------------
+2021-06-16 15:55:18.444 INFO  petfind.aspect.LogAspect                          :62   [32m60276000713478144 [0;39m ------------- 开始 -------------
+2021-06-16 15:55:18.445 INFO  petfind.aspect.LogAspect                          :63   [32m60276000713478144 [0;39m 请求地址: http://127.0.0.1:9000/pic/uploadFindInfo POST
+2021-06-16 15:55:18.445 INFO  petfind.aspect.LogAspect                          :64   [32m60276000713478144 [0;39m 类名方法: petfind.controller.PicController.uploadFindInfo
+2021-06-16 15:55:18.446 INFO  petfind.aspect.LogAspect                          :65   [32m60276000713478144 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:55:18.448 INFO  petfind.aspect.LogAspect                          :87   [32m60276000713478144 [0;39m 请求参数: [{"address":"江苏省南京市栖霞区仙林街道南京师范大学仙林校区西区","newPicId":"60275987501420544"}]
+2021-06-16 15:55:18.449 INFO  petfind.controller.PicController                  :104  [32m60276000713478144 [0;39m 传来的用户 id为:null
+2021-06-16 15:55:18.454 ERROR petfind.controller.ControllerExceptionHandler     :71   [32m60276000713478144 [0;39m 系统异常：
+java.lang.IllegalArgumentException: non null key required
+	at org.springframework.util.Assert.notNull(Assert.java:201)
+	at org.springframework.data.redis.core.AbstractOperations.rawKey(AbstractOperations.java:106)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:60)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:222)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:53)
+	at petfind.controller.PicController.uploadFindInfo(PicController.java:106)
+	at petfind.controller.PicController$$FastClassBySpringCGLIB$$5e5da3aa.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at petfind.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at petfind.controller.PicController$$EnhancerBySpringCGLIB$$c993294d.uploadFindInfo(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-16 15:55:18.456 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m60276000713478144 [0;39m Resolved [java.lang.IllegalArgumentException: non null key required]
+2021-06-16 15:57:48.986 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:57:49.140 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-16 15:57:49.155 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-16 15:57:53.064 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.1.7.Final
+2021-06-16 15:57:53.074 INFO  petfind.config.PetFindApplication                 :55   [32m                  [0;39m Starting PetFindApplication using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 86527 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/宠物识别)
+2021-06-16 15:57:53.075 INFO  petfind.config.PetFindApplication                 :675  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-16 15:57:53.110 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-16 15:57:53.110 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-16 15:57:53.741 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :250  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-16 15:57:53.743 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :128  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-16 15:57:53.760 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :188  [32m                  [0;39m Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2021-06-16 15:57:54.512 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-16 15:57:54.519 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:57:54.519 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-16 15:57:54.520 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-16 15:57:54.574 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-16 15:57:54.574 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1463 ms
+2021-06-16 15:57:55.322 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-16 15:57:55.428 INFO  petfind.config.CorsConfig                         :35   [32m                  [0;39m 外部尝试访问磁盘图片
+2021-06-16 15:57:55.670 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-16 15:57:55.685 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-16 15:57:55.713 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-16 15:57:55.722 INFO  petfind.config.PetFindApplication                 :61   [32m                  [0;39m Started PetFindApplication in 2.997 seconds (JVM running for 3.532)
+2021-06-16 15:58:03.578 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 15:58:03.579 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-16 15:58:03.581 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-06-16 15:58:03.626 INFO  petfind.aspect.LogAspect                          :62   [32m60276693532807168 [0;39m ------------- 开始 -------------
+2021-06-16 15:58:03.627 INFO  petfind.aspect.LogAspect                          :63   [32m60276693532807168 [0;39m 请求地址: http://127.0.0.1:9000/user/logout/1 POST
+2021-06-16 15:58:03.627 INFO  petfind.aspect.LogAspect                          :64   [32m60276693532807168 [0;39m 类名方法: petfind.controller.UserController.logout
+2021-06-16 15:58:03.627 INFO  petfind.aspect.LogAspect                          :65   [32m60276693532807168 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:58:03.667 INFO  petfind.aspect.LogAspect                          :87   [32m60276693532807168 [0;39m 请求参数: ["1"]
+2021-06-16 15:58:03.673 INFO  petfind.controller.UserController                 :75   [32m60276693532807168 [0;39m 待删除的用户的id为：1
+2021-06-16 15:58:04.058 INFO  petfind.aspect.LogAspect                          :99   [32m60276693532807168 [0;39m 返回结果: {"success":true}
+2021-06-16 15:58:04.058 INFO  petfind.aspect.LogAspect                          :100  [32m60276693532807168 [0;39m ------------- 结束 耗时：433 ms -------------
+2021-06-16 15:58:11.351 INFO  petfind.aspect.LogAspect                          :62   [32m60276725937999872 [0;39m ------------- 开始 -------------
+2021-06-16 15:58:11.352 INFO  petfind.aspect.LogAspect                          :63   [32m60276725937999872 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-16 15:58:11.352 INFO  petfind.aspect.LogAspect                          :64   [32m60276725937999872 [0;39m 类名方法: petfind.controller.UserController.login
+2021-06-16 15:58:11.352 INFO  petfind.aspect.LogAspect                          :65   [32m60276725937999872 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:58:11.355 INFO  petfind.aspect.LogAspect                          :87   [32m60276725937999872 [0;39m 请求参数: [{"loginname":"admin"}]
+2021-06-16 15:58:11.360 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m60276725937999872 [0;39m HikariPool-1 - Starting...
+2021-06-16 15:58:11.944 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m60276725937999872 [0;39m HikariPool-1 - Start completed.
+2021-06-16 15:58:12.395 INFO  petfind.aspect.LogAspect                          :99   [32m60276725937999872 [0;39m 返回结果: {"content":{"email":"123@qq.com","id":1,"loginname":"admin","realname":"管理员"},"success":true}
+2021-06-16 15:58:12.396 INFO  petfind.aspect.LogAspect                          :100  [32m60276725937999872 [0;39m ------------- 结束 耗时：1045 ms -------------
+2021-06-16 15:58:19.177 INFO  petfind.aspect.LogAspect                          :62   [32m60276758762622976 [0;39m ------------- 开始 -------------
+2021-06-16 15:58:19.178 INFO  petfind.aspect.LogAspect                          :63   [32m60276758762622976 [0;39m 请求地址: http://127.0.0.1:9000/pic/uploadPic POST
+2021-06-16 15:58:19.178 INFO  petfind.aspect.LogAspect                          :64   [32m60276758762622976 [0;39m 类名方法: petfind.controller.PicController.upload
+2021-06-16 15:58:19.178 INFO  petfind.aspect.LogAspect                          :65   [32m60276758762622976 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:58:19.179 INFO  petfind.aspect.LogAspect                          :87   [32m60276758762622976 [0;39m 请求参数: [null]
+2021-06-16 15:58:19.183 INFO  petfind.service.impl.PicServiceImpl               :87   [32m60276758762622976 [0;39m 获取的文件名为:3.jpg
+2021-06-16 15:58:19.183 INFO  petfind.service.impl.PicServiceImpl               :93   [32m60276758762622976 [0;39m 获取的文件后缀为:.jpg
+2021-06-16 15:58:19.189 INFO  petfind.service.impl.PicServiceImpl               :117  [32m60276758762622976 [0;39m 待插入的图片主键为
+2021-06-16 15:58:19.309 INFO  petfind.aspect.LogAspect                          :99   [32m60276758762622976 [0;39m 返回结果: {"content":{"newPicId":"60276758812954624","newPicName":"60276758804566016.jpg","newPicPath":"http://127.0.0.1:9000/disPic/60276758804566016.jpg"},"success":true}
+2021-06-16 15:58:19.310 INFO  petfind.aspect.LogAspect                          :100  [32m60276758762622976 [0;39m ------------- 结束 耗时：133 ms -------------
+2021-06-16 15:58:22.528 INFO  petfind.aspect.LogAspect                          :62   [32m60276772817735680 [0;39m ------------- 开始 -------------
+2021-06-16 15:58:22.529 INFO  petfind.aspect.LogAspect                          :63   [32m60276772817735680 [0;39m 请求地址: http://127.0.0.1:9000/pic/uploadFindInfo POST
+2021-06-16 15:58:22.530 INFO  petfind.aspect.LogAspect                          :64   [32m60276772817735680 [0;39m 类名方法: petfind.controller.PicController.uploadFindInfo
+2021-06-16 15:58:22.530 INFO  petfind.aspect.LogAspect                          :65   [32m60276772817735680 [0;39m 远程地址: 127.0.0.1
+2021-06-16 15:58:22.533 INFO  petfind.aspect.LogAspect                          :87   [32m60276772817735680 [0;39m 请求参数: [{"address":"江苏省南京市栖霞区仙林街道南京师范大学仙林校区西区","newPicId":"60276758812954624","userId":"1"}]
+2021-06-16 15:58:22.534 INFO  petfind.controller.PicController                  :104  [32m60276772817735680 [0;39m 传来的用户 id为:1
+2021-06-16 15:58:22.639 INFO  petfind.aspect.LogAspect                          :99   [32m60276772817735680 [0;39m 返回结果: {"success":true}
+2021-06-16 15:58:22.640 INFO  petfind.aspect.LogAspect                          :100  [32m60276772817735680 [0;39m ------------- 结束 耗时：112 ms -------------

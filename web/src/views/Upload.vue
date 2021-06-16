@@ -37,20 +37,20 @@
 
 <script>
 
-    import { InboxOutlined,UploadOutlined } from '@ant-design/icons-vue';
     import { message } from 'ant-design-vue';
     import { defineComponent, ref,reactive } from 'vue';
     import axios from "axios";
+    import {computed} from "@vue/reactivity";
+    import store from "@/store";
+
 
 
     export default {
-        components: {
-            InboxOutlined,
-            UploadOutlined
-        },
         name: "Upload",
 
         setup() {
+
+            const user = computed(() => store.state.user);
 
             /**
              * 图片上传信息
@@ -84,7 +84,8 @@
             const formState = ref({
                 address:"",
                 newPicId:"",
-                newPicPath:""
+                newPicPath:"",
+                userId:""
             });
 
             const uploadInfo = () => {
@@ -96,6 +97,7 @@
                     message.error("请输入发现地址");
                     return false;
                 }
+                formState.value.userId=user.value.id;
 
                 axios.post("/pic/uploadFindInfo",formState.value).then(resp=>{
                     const data = resp.data;

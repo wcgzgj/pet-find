@@ -1,9 +1,8 @@
 package petfind.controller;
 
-import org.apache.ibatis.annotations.Update;
-import org.aspectj.weaver.NewFieldTypeMunger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import petfind.pojo.User;
@@ -11,15 +10,11 @@ import petfind.req.PicFindInfoSaveReq;
 import petfind.resp.CommonResp;
 import petfind.resp.PicQueryResp;
 import petfind.resp.PicUploadResp;
-import petfind.resp.UserLoginResp;
 import petfind.service.PicService;
 import petfind.util.SnowFlake;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -42,6 +37,9 @@ public class PicController {
     @Resource
     private SnowFlake snowFlake;
 
+    @Resource
+    private RedisTemplate redisTemplate;
+
     @RequestMapping("/list")
     public CommonResp list() {
         List<PicQueryResp> list = picService.getAll();
@@ -55,12 +53,11 @@ public class PicController {
      * 图片上传接口
      * 将图片上传后，会将改名后的图片名称，以及其主键返回给前端
      * @param file
-     * @param request
      * @return
      * @throws IOException
      */
     @PostMapping("/uploadPic")
-    public CommonResp upload(@RequestParam MultipartFile file,HttpServletRequest request) {
+    public CommonResp upload(@RequestParam MultipartFile file) {
         PicUploadResp upload = picService.upload(file);
         CommonResp commonResp = new CommonResp();
         commonResp.setContent(upload);
@@ -72,11 +69,10 @@ public class PicController {
      * 上传找寻图片
      * 放到缓存数据区，再调用 python 接口，查找图片
      * @param file
-     * @param request
      * @return
      */
     @PostMapping("/uploadFindPic")
-    public CommonResp uploadFindPic(@RequestParam MultipartFile file,HttpServletRequest request) {
+    public CommonResp uploadFindPic(@RequestParam MultipartFile file) {
 
         /**
          * 这里，应该是接受用户上传的图片
@@ -101,13 +97,24 @@ public class PicController {
      * @return
      */
     @PostMapping("/uploadFindInfo")
-    public CommonResp uploadFindInfo(@RequestBody @Valid PicFindInfoSaveReq req,HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        UserLoginResp user = (UserLoginResp) session.getAttribute("user");
-        LOG.info("获取的Session数据为：{}",user.getLoginname());
-        // req.setUserId(user.getId());
-        // picService.uploadFindInfo(req);
+    public CommonResp uploadFindInfo(@RequestBody @Valid PicFindInfoSaveReq req) {
         CommonResp commonResp = new CommonResp();
+
+        String userId = req.getUserId();
+        LOG.info("传来的用户 id为:{}",userId);
+
+        Object o = redisTemplate.opsForValue().get(userId);
+        if (o==null) {
+            /**
+             * 在用户未登录的情况下，禁止用户执行图片上传操作
+             */
+            commonResp.setSuccess(false);
+            commonResp.setContent("错误，当前用户未登录");
+            return commonResp;
+        }
+
+        picService.uploadFindInfo(req);
+
         return commonResp;
     }
 
