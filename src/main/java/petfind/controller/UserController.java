@@ -1,5 +1,7 @@
 package petfind.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +32,8 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    private static final Logger LOG= LoggerFactory.getLogger(UserController.class);
+
     /**
      * 登录接口
      * @param req
@@ -45,6 +49,8 @@ public class UserController {
             throw new BusinessException(BusinessExceptionCode.LOGIN_USER_ERROR);
         }
         session.setAttribute("user",login);
+        UserLoginResp sessionUser = (UserLoginResp) session.getAttribute("user");
+        LOG.info("session中存储的数据为:{}",sessionUser.getLoginname());
 
         CommonResp commonResp = new CommonResp();
         commonResp.setContent(login);

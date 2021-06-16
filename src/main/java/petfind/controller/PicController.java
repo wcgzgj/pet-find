@@ -11,11 +11,13 @@ import petfind.req.PicFindInfoSaveReq;
 import petfind.resp.CommonResp;
 import petfind.resp.PicQueryResp;
 import petfind.resp.PicUploadResp;
+import petfind.resp.UserLoginResp;
 import petfind.service.PicService;
 import petfind.util.SnowFlake;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
@@ -99,8 +101,12 @@ public class PicController {
      * @return
      */
     @PostMapping("/uploadFindInfo")
-    public CommonResp uploadFindInfo(@RequestBody @Valid PicFindInfoSaveReq req) {
-        picService.uploadFindInfo(req);
+    public CommonResp uploadFindInfo(@RequestBody @Valid PicFindInfoSaveReq req,HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        UserLoginResp user = (UserLoginResp) session.getAttribute("user");
+        LOG.info("获取的Session数据为：{}",user.getLoginname());
+        // req.setUserId(user.getId());
+        // picService.uploadFindInfo(req);
         CommonResp commonResp = new CommonResp();
         return commonResp;
     }
