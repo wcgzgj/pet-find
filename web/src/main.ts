@@ -25,7 +25,7 @@ router.beforeEach((to,from,next)=>{
                         next();
                 } else {
                         console.log("不能放行，跳转到首页");
-                        message.error("请先登录！");
+                        message.error("请先登录！",1);
                         router.push("/");
                 }
         }else{

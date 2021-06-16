@@ -53,6 +53,7 @@ public class UserController {
             throw new BusinessException(BusinessExceptionCode.LOGIN_USER_ERROR);
         }
         User copy = CopyUtil.copy(login, User.class);
+        LOG.info("登录前，数据库里的用户数据为:{}",copy);
 
         /**
          * 保存用户的登录信息
@@ -86,7 +87,8 @@ public class UserController {
 
 
     @PostMapping("/register")
-    public CommonResp register(@Valid @RequestBody UserSaveReq req) {
+    public CommonResp register(@RequestBody @Valid UserSaveReq req) {
+        LOG.info("待插入的数据为:{}",req);
         boolean res = userService.insert(req);
         CommonResp commonResp = new CommonResp();
         return commonResp;

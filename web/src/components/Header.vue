@@ -76,18 +76,18 @@
             cancel-text="取消"
             @ok="register"
     >
-        <a-form :model="loginUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+        <a-form :model="registerUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
             <a-form-item label="用户名">
-                <a-input v-model:value="loginUser.loginname" />
+                <a-input v-model:value="registerUser.loginname" />
             </a-form-item>
             <a-form-item label="真实姓名">
-                <a-input v-model:value="loginUser.loginname" />
+                <a-input v-model:value="registerUser.realname" />
             </a-form-item>
             <a-form-item label="密码">
-                <a-input v-model:value="loginUser.password" type="password"/>
+                <a-input v-model:value="registerUser.password" type="password"/>
             </a-form-item>
-            <a-form-item label="密码">
-                <a-input v-model:value="loginUser.password" type="password"/>
+            <a-form-item label="邮箱">
+                <a-input v-model:value="registerUser.email"/>
             </a-form-item>
         </a-form>
     </a-modal>
@@ -102,6 +102,7 @@
     import axios from "axios";
     import {computed} from "@vue/reactivity";
     import store from "@/store";
+    import router from '../router';
 
     export default {
 
@@ -168,14 +169,16 @@
                     if (data.success) {
                         message.success("退出成功");
                         /**
-                         * router 跳转到首页
-                         */
-                        /**
                          * 退出登录时
                          * 将 sessionStorage 中对应 user的信息清空
                          * 因为
                          */
                         store.commit("setUser", {});
+
+                        /**
+                         * router 跳转到首页
+                         */
+                        router.push("/");
 
                     } else {
                         message.error(data.message);
@@ -189,6 +192,10 @@
              */
             const registerVisible = ref(false);
             const showRegister = ()=> {
+                registerUser.value.loginname="";
+                registerUser.value.realname="";
+                registerUser.value.password="";
+                registerUser.value.email="";
                 registerVisible.value=true;
             }
             const hideRegister = ()=> {
@@ -202,7 +209,28 @@
             });
 
             const register = () => {
-                axios.post("/user/register",registerUser).then(resp=> {
+
+                if (registerUser.value.loginname.length==0 ||
+                    registerUser.value.realname.length==0 ||
+                    registerUser.value.password.length==0 ||
+                    registerUser.value.email.length==0) {
+                    message.error("请输入完整的信息");
+                    return false;
+                }
+
+                let reg = new RegExp("^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$");
+                if(!reg.test(registerUser.value.email)) {
+                    message.error("请输入正确定邮箱");
+                    return;
+                }
+
+
+                console.log("loginname:"+registerUser.value.loginname)
+                console.log("realname:"+registerUser.value.realname)
+                console.log("password:"+registerUser.value.password)
+                console.log("email:"+registerUser.value.email)
+
+                axios.post("/user/register",registerUser.value).then(resp=> {
                     const data = resp.data;
                     if (data.success) {
                         hideRegister();
@@ -227,7 +255,9 @@
                 registerVisible,
 
                 loginUser,
-                user
+                user,
+                registerUser,
+                register
             }
         },
     }
