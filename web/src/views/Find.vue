@@ -44,7 +44,6 @@
 
 <script>
 
-    import { StarOutlined, LikeOutlined, MessageOutlined } from '@ant-design/icons-vue';
     import { defineComponent,ref } from 'vue';
     import axios from "axios";
     import {message} from "ant-design-vue";
@@ -54,18 +53,6 @@
         name: "Find",
 
         setup() {
-
-
-            /**
-             * 图片上传信息
-             */
-            const picList = [
-                // {
-                //     title: `宠物信息`,
-                //     description: '宠物发现于:'+'南京市栖霞区',
-                //     content: '宠物的发现者是：faroz'+"\n"+"发现者信息为:"+"zhan@qq.com",
-                // }
-            ];
 
             const uploadImage = () => {
                 let formData = new FormData();
