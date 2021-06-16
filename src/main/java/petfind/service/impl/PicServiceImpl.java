@@ -3,11 +3,15 @@ package petfind.service.impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import petfind.exception.FileException;
 import petfind.exception.FileExceptionCode;
 import petfind.mapper.PicMapper;
+import petfind.mapper.UserMapper;
 import petfind.pojo.Pic;
+import petfind.pojo.User;
 import petfind.req.PicFindInfoSaveReq;
 import petfind.resp.PicQueryResp;
 import petfind.resp.PicUploadResp;
@@ -38,6 +42,9 @@ public class PicServiceImpl implements PicService {
     private PicMapper picMapper;
 
     @Resource
+    private UserMapper userMapper;
+
+    @Resource
     private SnowFlake snowFlake;
 
     private static final Logger LOG= LoggerFactory.getLogger(PicServiceImpl.class);
@@ -60,14 +67,20 @@ public class PicServiceImpl implements PicService {
 
     /**
      * 获取所有图片的路径
-     *
+     * 因为涉及多表查询，所以要开启事务
      * @return
      */
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
     @Override
     public List<PicQueryResp> getAll() {
         List<Pic> pics = picMapper.selectByExample(null);
 
         List<PicQueryResp> picQueryResps = CopyUtil.copyList(pics, PicQueryResp.class);
+        for (PicQueryResp picQueryResp : picQueryResps) {
+            User user = userMapper.selectByPrimaryKey(picQueryResp.getUserid());
+            LOG.info("查找到的用户信息为:{}",user);
+            picQueryResp.setUser(user);
+        }
         return picQueryResps;
     }
 

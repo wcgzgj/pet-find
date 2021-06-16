@@ -75,14 +75,22 @@ public class PicController {
     public CommonResp uploadFindPic(@RequestParam MultipartFile file) {
 
         /**
-         * 这里，应该是接受用户上传的图片
-         * 然后根据图片信息，调用 python 接口
-         * 最后，再获取匹配的图片
+         * ！！！伪造返回数据
+         * 后面需要删除
          */
         List<PicQueryResp> all = picService.getAll();
-        for (PicQueryResp picQueryResp : all) {
-            picQueryResp.setUser(new User());
-        }
+
+        /**
+         * 将图片存储到图片暂存区
+         */
+        //------
+
+        /**
+         * 调用 service 层代码
+         * 调用 python 脚本，获取到对应的图片的信息
+         */
+        //-------
+
 
         CommonResp commonResp = new CommonResp();
         commonResp.setContent(all);

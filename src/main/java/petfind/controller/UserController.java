@@ -9,6 +9,7 @@ import petfind.exception.BusinessException;
 import petfind.exception.BusinessExceptionCode;
 import petfind.pojo.User;
 import petfind.req.UserLoginReq;
+import petfind.req.UserSaveReq;
 import petfind.resp.CommonResp;
 import petfind.resp.UserLoginResp;
 import petfind.service.UserService;
@@ -82,6 +83,16 @@ public class UserController {
         CommonResp commonResp = new CommonResp();
         return commonResp;
     }
+
+
+    @PostMapping("/register")
+    public CommonResp register(@Valid @RequestBody UserSaveReq req) {
+        boolean res = userService.insert(req);
+        CommonResp commonResp = new CommonResp();
+        return commonResp;
+    }
+
+
 
 
 

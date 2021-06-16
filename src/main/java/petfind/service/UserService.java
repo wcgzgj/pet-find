@@ -3,6 +3,7 @@ package petfind.service;
 import petfind.mapper.UserMapper;
 import petfind.pojo.User;
 import petfind.req.UserLoginReq;
+import petfind.req.UserSaveReq;
 import petfind.resp.UserLoginResp;
 
 import javax.annotation.Resource;
@@ -25,6 +26,12 @@ public interface UserService {
     UserLoginResp login(UserLoginReq req);
 
 
+    /**
+     * 用户插入业务
+     * @param req
+     * @return
+     */
+    boolean insert(UserSaveReq req);
 
 
 }

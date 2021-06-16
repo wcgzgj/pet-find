@@ -15,7 +15,7 @@
             <!--/>-->
 
 
-            <a-list item-layout="vertical" size="large" :data-source="picList">
+            <a-list item-layout="vertical" size="large" :data-source="list">
 
                 <template #renderItem="{ item }">
                     <a-list-item key="item.title">
@@ -23,7 +23,7 @@
                             <img
                                     width="200"
                                     alt="pet"
-                                    src="../assets/lost_pet.jpg"
+                                    :src="'http://127.0.0.1:9000/disPic/'+item.href"
                             />
                         </template>
                         <a-list-item-meta :description="item.description">
@@ -31,7 +31,9 @@
                                 <a :href="item.href">{{ item.title }}</a>
                             </template>
                         </a-list-item-meta>
-                        {{ item.content }}
+                        {{ item.finder }}
+                        <br/>
+                        {{ item.finderInfo }}
                     </a-list-item>
                 </template>
             </a-list>
@@ -54,6 +56,20 @@
 
         setup() {
 
+
+            /**
+             * 图片上传信息
+             */
+            const list = ref([]);
+
+            const picList = [
+                {
+                    title: `宠物信息`,
+                    description: '宠物发现于:'+'南京市栖霞区',
+                    content: '宠物的发现者是：faroz'+"\n"+"发现者信息为:"+"zhan@qq.com",
+                }
+            ];
+
             const uploadImage = () => {
                 let formData = new FormData();
                 console.log("当前文件的个数为："+document.querySelector("#file-upload-input").files.length);
@@ -69,15 +85,19 @@
                             message.error("错误，未查到宠物信息");
                         }
                         for (let i = 0; i < dbList.length; i++) {
-                            const address= dbList[i].address==null?'':dbList[i].address;
-                            const realname = dbList[i].user.realname==null?'':dbList[i].user.realname;
-                            const email = dbList[i].user.email ==null?'':dbList[i].user.email;
-                            var pic={
+                            let address= dbList[i].address==null?'':dbList[i].address;
+                            let realname = dbList[i].user.realname==null?'':dbList[i].user.realname;
+                            let email = dbList[i].user.email ==null?'':dbList[i].user.email;
+                            let href = dbList[i].path ==null?'':dbList[i].path;
+                            console.log("发现者信息为:"+realname+"   "+email);
+                            list.value.push({
                                 title: `宠物信息`,
                                 description: '宠物发现于:'+address,
-                                content: '宠物的发现者是：'+realname+"\n"+"发现者信息为:"+email
-                            }
-                            picList.push(pic);
+                                finder: '宠物的发现者是:  '+realname,
+                                finderInfo: "发现者邮箱为:  "+email,
+                                href: href
+                            });
+
                         }
                         for (let i = 0; i < dbList.length; i++) {
                             console.log("picList中的信息为："+picList[i].address)
@@ -92,6 +112,7 @@
 
             return {
                 picList,
+                list,
                 uploadImage
             };
         },

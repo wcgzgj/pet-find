@@ -25,6 +25,8 @@ public class PicQueryResp {
 
     private String address;
 
+    private Long userid;
+
     /**
      * 找到该宠物的志愿者的信息
      */

@@ -10,9 +10,11 @@ import petfind.mapper.UserMapper;
 import petfind.pojo.User;
 import petfind.pojo.UserExample;
 import petfind.req.UserLoginReq;
+import petfind.req.UserSaveReq;
 import petfind.resp.UserLoginResp;
 import petfind.service.UserService;
 import petfind.util.CopyUtil;
+import petfind.util.SnowFlake;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -31,6 +33,9 @@ public class UserServiceImpl implements UserService {
 
     @Resource
     private UserMapper userMapper;
+
+    @Resource
+    private SnowFlake snowFlake;
 
 
     /**
@@ -86,4 +91,21 @@ public class UserServiceImpl implements UserService {
 
         return copy;
     }
+
+    /**
+     * 用户插入业务
+     *
+     * @param req
+     * @return
+     */
+    @Override
+    public boolean insert(UserSaveReq req) {
+        User user = CopyUtil.copy(req, User.class);
+        user.setId(snowFlake.nextId());
+        user.setCreatetime(new Date());
+        userMapper.insert(user);
+        return true;
+    }
+
+
 }

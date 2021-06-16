@@ -74,9 +74,22 @@
             title="注册"
             ok-text="确认"
             cancel-text="取消"
-            @ok="hideRegister"
+            @ok="register"
     >
-        <p>this is register modal</p>
+        <a-form :model="loginUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+            <a-form-item label="用户名">
+                <a-input v-model:value="loginUser.loginname" />
+            </a-form-item>
+            <a-form-item label="真实姓名">
+                <a-input v-model:value="loginUser.loginname" />
+            </a-form-item>
+            <a-form-item label="密码">
+                <a-input v-model:value="loginUser.password" type="password"/>
+            </a-form-item>
+            <a-form-item label="密码">
+                <a-input v-model:value="loginUser.password" type="password"/>
+            </a-form-item>
+        </a-form>
     </a-modal>
 
 
@@ -115,17 +128,6 @@
                 loginVisible.value = true;
             }
 
-
-            /**
-             * 展示注册页面
-             */
-            const registerVisible = ref(false);
-            const showRegister = ()=> {
-                registerVisible.value=true;
-            }
-            const hideRegister = ()=> {
-                registerVisible.value=false;
-            }
 
 
             const loginUser = ref({
@@ -175,6 +177,36 @@
                          */
                         store.commit("setUser", {});
 
+                    } else {
+                        message.error(data.message);
+                    }
+                })
+            }
+
+
+            /**
+             * 注册的数据以及异步函数
+             */
+            const registerVisible = ref(false);
+            const showRegister = ()=> {
+                registerVisible.value=true;
+            }
+            const hideRegister = ()=> {
+                registerVisible.value=false;
+            }
+            const registerUser = ref({
+                loginname:"",
+                realname:"",
+                password:"",
+                email:""
+            });
+
+            const register = () => {
+                axios.post("/user/register",registerUser).then(resp=> {
+                    const data = resp.data;
+                    if (data.success) {
+                        hideRegister();
+                        message.success("注册成功")
                     } else {
                         message.error(data.message);
                     }
