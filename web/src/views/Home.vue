@@ -8,8 +8,9 @@
 
 
     <!--上传，还是找寻-->
+
       <router-link to="/find">
-        <a-card hoverable style="width: 200px;margin-bottom: 20px" >
+        <a-card hoverable style="width: 200px;margin-bottom: 20px;" onclick="{}">
           <template #cover>
             <img alt="example" src="../assets/master_pet.jpg" />
           </template>
@@ -39,12 +40,24 @@
 
 <script lang="ts">
 import { defineComponent ,ref} from 'vue';
+import {computed} from "@vue/reactivity";
+import store from "@/store";
+import {message} from "ant-design-vue";
 
 export default defineComponent({
   name: 'Home',
   components: {
     setup() {
+
+      const user = computed(() => store.state.user);
+
+      const toFind = () => {
+        message.success("点击了卡片");
+      }
+
+
       return {
+        toFind,
         selectedKeys: ref(['2']),
       };
     },

@@ -3,6 +3,7 @@ package petfind.service;
 import com.sun.tools.corba.se.idl.StringGen;
 import org.springframework.web.multipart.MultipartFile;
 import petfind.req.PicFindInfoSaveReq;
+import petfind.resp.PicQueryResp;
 import petfind.resp.PicUploadResp;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,16 +29,15 @@ public interface PicService {
      * 获取所有图片的路径
      * @return
      */
-    List<String> getAll();
+    List<PicQueryResp> getAll();
 
 
     /**
      * 文件上传
      * @param file
-     * @param req
      * @return
      */
-    PicUploadResp upload(MultipartFile file, HttpServletRequest req);
+    PicUploadResp upload(MultipartFile file);
 
 
     /**

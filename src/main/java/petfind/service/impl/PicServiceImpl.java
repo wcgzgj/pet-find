@@ -9,6 +9,7 @@ import petfind.exception.FileExceptionCode;
 import petfind.mapper.PicMapper;
 import petfind.pojo.Pic;
 import petfind.req.PicFindInfoSaveReq;
+import petfind.resp.PicQueryResp;
 import petfind.resp.PicUploadResp;
 import petfind.service.PicService;
 import petfind.util.CopyUtil;
@@ -63,13 +64,11 @@ public class PicServiceImpl implements PicService {
      * @return
      */
     @Override
-    public List<String> getAll() {
+    public List<PicQueryResp> getAll() {
         List<Pic> pics = picMapper.selectByExample(null);
-        List<String> paths = new ArrayList<>();
-        for (Pic pic : pics) {
-            paths.add(pic.getPath());
-        }
-        return paths;
+
+        List<PicQueryResp> picQueryResps = CopyUtil.copyList(pics, PicQueryResp.class);
+        return picQueryResps;
     }
 
 
@@ -78,11 +77,10 @@ public class PicServiceImpl implements PicService {
      * 上传后，返回文件的全路径
      *
      * @param file
-     * @param req
      * @return 文件存放的全路径
      */
     @Override
-    public PicUploadResp upload(MultipartFile file, HttpServletRequest req) {
+    public PicUploadResp upload(MultipartFile file) {
         String path = "/Users/faro_z/Pictures/cat_db";
         String originalFilename = file.getOriginalFilename();
 
@@ -127,6 +125,7 @@ public class PicServiceImpl implements PicService {
         PicUploadResp picUploadResp = new PicUploadResp();
         picUploadResp.setNewPicName(newFileName);
         picUploadResp.setNewPicId(newPicId.toString());
+        picUploadResp.setNewPicPath("http://127.0.0.1:9000/disPic/"+newFileName);
 
         return picUploadResp;
     }

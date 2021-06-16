@@ -12,12 +12,18 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/find',
     name: 'Find',
-    component: Find
+    component: Find,
+    meta:{
+      needLogin: true
+    }
   },
   {
     path: '/upload',
     name: 'Upload',
-    component: Upload
+    component: Upload,
+    meta:{
+      needLogin: true
+    }
   },
   {
     path: '/about',

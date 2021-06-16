@@ -18,5 +18,6 @@ public class PicUploadResp {
 
     private String newPicName;
     private String newPicId;
+    private String newPicPath;
 
 }

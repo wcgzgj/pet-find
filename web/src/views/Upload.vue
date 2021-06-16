@@ -6,10 +6,13 @@
         </a-breadcrumb>
         <div :style="{ background: '#fff', padding: '24px', minHeight: '280px' }" class="card-display">
 
-            <!--</a-upload>-->
             <input type="file" v-on:change="uploadImage" id="file-upload-input">
 
-
+            <a-image
+                    style="margin-top: 20px"
+                    :width="200"
+                    :src="formState.newPicPath"
+            />
 
             <!--志愿者信息表单-->
             <a-form
@@ -63,7 +66,8 @@
                     if (data.success) {
                         message.success("图片上传成功")
                         formState.value.newPicId=data.content.newPicId;
-                        console.log("回显的图片信息为："+formState.value.newPicId);
+                        formState.value.newPicPath=data.content.newPicPath;
+                        console.log("回显的图片路径为："+formState.value.newPicPath);
                     } else {
                         message.error(data.message);
                     }
@@ -79,7 +83,8 @@
              */
             const formState = ref({
                 address:"",
-                newPicId:""
+                newPicId:"",
+                newPicPath:""
             });
 
             const uploadInfo = () => {
@@ -105,8 +110,10 @@
 
             //清空表单信息
             const reset = () => {
-
                 formState.value.address="";
+                formState.value.newPicPath="";
+                formState.value.newPicId="";
+                document.querySelector("#file-upload-input").files=[];
             }
 
 

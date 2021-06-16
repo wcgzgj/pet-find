@@ -6,8 +6,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import petfind.pojo.User;
 import petfind.req.PicFindInfoSaveReq;
 import petfind.resp.CommonResp;
+import petfind.resp.PicQueryResp;
 import petfind.resp.PicUploadResp;
 import petfind.service.PicService;
 import petfind.util.SnowFlake;
@@ -40,7 +42,7 @@ public class PicController {
 
     @RequestMapping("/list")
     public CommonResp list() {
-        List<String> list = picService.getAll();
+        List<PicQueryResp> list = picService.getAll();
         CommonResp commonResp = new CommonResp();
         commonResp.setContent(list);
         return commonResp;
@@ -56,10 +58,37 @@ public class PicController {
      * @throws IOException
      */
     @PostMapping("/uploadPic")
-    public CommonResp upload(@RequestParam MultipartFile file,HttpServletRequest request) throws IOException {
-        PicUploadResp upload = picService.upload(file, request);
+    public CommonResp upload(@RequestParam MultipartFile file,HttpServletRequest request) {
+        PicUploadResp upload = picService.upload(file);
         CommonResp commonResp = new CommonResp();
         commonResp.setContent(upload);
+        return commonResp;
+    }
+
+
+    /**
+     * 上传找寻图片
+     * 放到缓存数据区，再调用 python 接口，查找图片
+     * @param file
+     * @param request
+     * @return
+     */
+    @PostMapping("/uploadFindPic")
+    public CommonResp uploadFindPic(@RequestParam MultipartFile file,HttpServletRequest request) {
+
+        /**
+         * 这里，应该是接受用户上传的图片
+         * 然后根据图片信息，调用 python 接口
+         * 最后，再获取匹配的图片
+         */
+        List<PicQueryResp> all = picService.getAll();
+        for (PicQueryResp picQueryResp : all) {
+            picQueryResp.setUser(new User());
+        }
+
+        CommonResp commonResp = new CommonResp();
+        commonResp.setContent(all);
+
         return commonResp;
     }
 
@@ -73,7 +102,6 @@ public class PicController {
     public CommonResp uploadFindInfo(@RequestBody @Valid PicFindInfoSaveReq req) {
         picService.uploadFindInfo(req);
         CommonResp commonResp = new CommonResp();
-
         return commonResp;
     }
 
